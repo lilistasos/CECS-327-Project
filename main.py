@@ -9,7 +9,7 @@ import json
 
 ray.init()
 
-with open("data/reviews.json") as f:
+with open("data/yelp_academic_dataset_review.json") as f:
     reviews = json.load(f)
 
 # Run Ray tasks

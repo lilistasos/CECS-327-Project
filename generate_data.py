@@ -2,19 +2,20 @@ from datasets import load_dataset
 import json
 import os
 
+# Ensure the data directory exists
 os.makedirs("data", exist_ok=True)
 
-# Load the English subset of Amazon Reviews
-dataset = load_dataset("amazon_reviews_multi", "en")
+# Load the IMDb reviews dataset (train split)
+dataset = load_dataset("imdb", split="train")
 
-# Select a small subset (100 samples)
-sample = dataset["train"].select(range(100))
+# Select the first 1000 reviews (adjust as needed)
+subset = dataset.select(range(1000))
 
-# Create list of dicts
-output = [{"text": x["review_body"], "stars": x["stars"]} for x in sample]
+# Convert to list of dicts
+data = [dict(row) for row in subset]
 
 # Save to JSON
 with open("data/reviews.json", "w") as f:
-    json.dump(output, f, indent=2)
+    json.dump(data, f, indent=2)
 
-print("reviews.json created with", len(output), "entries.")
+print(f"Saved {len(data)} reviews to data/reviews.json")
