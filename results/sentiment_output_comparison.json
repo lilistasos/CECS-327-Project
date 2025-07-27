@@ -57,7 +57,7 @@
   },
   {
     "text": "Think of it as an intro to Disney magic for the little ones. Almost all of the attractions can be completed in 1.5days.One drawback was the timing. For example, Disney's Storybook Theatre is closed Wed Thu for private events. Some restaurants close mid week Tue Thur as well. So best not to plan your visit during mid week.The biggest disappointment is the food at the Park. Even Maxim's is so so only. The only decent Restaurant is Main Street Corner Cafe and the Main Street Bakery. And do be prepared for the typical abrupt HongKong style service from the serving staff.",
-    "sentiment_LLM": "NEUTRAL",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -225,7 +225,7 @@
   },
   {
     "text": "We visited here on a Wednesday. We arrived for opening and found the queue times to be short and had done most the rides we wanted to by early afternoon. Unfortunately there were no fireworks due to the castle being renovated and we have seen many parades at Disney world so we decided not to stay for the evening. ",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -385,7 +385,7 @@
   },
   {
     "text": "We had a terrific time at Disneyland HongKong   rides were fun, waiting times ok, shows were enjoyable, very clean, staff super friendly   only let down was average food but to be expected.",
-    "sentiment_LLM": "NEUTRAL",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -393,7 +393,7 @@
   },
   {
     "text": "Even though the rain set in for most of the day, as an adult we still had a fun time at Disneyland Hong Kong",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -401,7 +401,7 @@
   },
   {
     "text": "Good to see while here, but very small. Great if we brought the children, but not for adults who have been to other ones. Not exciting for bigger children either.",
-    "sentiment_LLM": "NEUTRAL",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "POSITIVE",
@@ -665,7 +665,7 @@
   },
   {
     "text": "We had a local family member to take us round and he knew all the tricks to get around but the park is so super busy with so many queues. Kids enjoyed. I think evening is way better as easier to get on rides without queues! Avoid weekends and local holidays! The lion king show was fabulous! ",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -673,7 +673,7 @@
   },
   {
     "text": "Definitely a fun place to visit whilst in Honkers. We had loads of fun there and would recommend a visit",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -697,7 +697,7 @@
   },
   {
     "text": "We've been here quite a few times and one of the better Disney's as queues are short and small enough to see everything in a day.We went mid week so was lot quieter and bought our tickets through Klook which was easy, but many of the rides attractions were under refurbishment and around 50% of the restaurants were closed (presumably due to less people). Price stays the same though! So you may want to double check in advance if you really want to experience any that might be closed to avoid disappointment.",
-    "sentiment_LLM": "NEUTRAL",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -713,7 +713,7 @@
   },
   {
     "text": "Hong Kong Disneyland is definitely a must see. It is a smaller park but what it loses in size it makes up for in quality. Hong Kong is currently home to the only Marvel themed rides and they do not disappoint. Hong Kong has many of the standard rides shows you expect from Disney but it also maintains a variety of exclusives. Hong Kong also has a lot of exclusive merchandise especially pins. Also most if not all of the rides are Bilingual. ",
-    "sentiment_LLM": "NEUTRAL",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
