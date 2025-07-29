@@ -125,7 +125,7 @@ for i in range(min(3, len(comparison_results))):
     print(f"  HuggingFace: {d['sentiment_HuggingFace']}")
     print()
 
-print("\n✅ Success! You now have:")
+print("\nSuccess! You now have:")
 print("- LLM sentiment analysis (DialoGPT-small)")
 print("- API-based sentiment analysis (Cloud-based)")
 print("- 3-class Hugging Face sentiment analysis (RoBERTa)")
