@@ -22,6 +22,7 @@ def print_memory_status(stage=""):
     """Print current memory usage"""
     memory_mb = get_memory_usage()
     print(f"Memory usage {stage}: {memory_mb:.1f} MB")
+    return memory_mb
 
 print("API KEY:", os.getenv("OPENAI_API_KEY"))
 
@@ -38,43 +39,43 @@ print_memory_status("after loading data")
 
 # Memory-safe version with five approaches
 print("Available models:")
-print("1. LLM (DialoGPT-small) - Memory Safe ✅")
-print("2. API-based (Twitter RoBERTa) - Memory Safe ✅") 
-print("3. Hugging Face 3-class (RoBERTa) - Memory Safe ✅")
-print("4. Manual Sentiment Analysis - Memory Safe ✅")
-print("5. Hugging Face (DistilBERT) - Memory Safe ✅")
+print("1. LLM (DialoGPT-small) - Memory Safe")
+print("2. API-based (Twitter RoBERTa) - Memory Safe") 
+print("3. Hugging Face 3-class (RoBERTa) - Memory Safe")
+print("4. Manual Sentiment Analysis - Memory Safe")
+print("5. Hugging Face (DistilBERT) - Memory Safe")
 
 # Run LLM sentiment analysis
 print("\nRunning LLM sentiment analysis...")
-print_memory_status("before LLM")
+llm_memory_before = print_memory_status("before LLM")
 start = time.time()
 futures_llm = [analyze_sentiment_llm_safe.remote(r) for r in reviews]
 results_llm = ray.get(futures_llm)
 llm_time = time.time() - start
 print(f"LLM time: {llm_time:.2f} seconds")
-print_memory_status("after LLM")
+llm_memory_after = print_memory_status("after LLM")
 gc.collect()  # Force garbage collection
 
 # Run API-based sentiment analysis
 print("\nRunning API-based sentiment analysis...")
-print_memory_status("before API")
+api_memory_before = print_memory_status("before API")
 start = time.time()
 futures_api = [analyze_sentiment_api_simple.remote(r) for r in reviews]
 results_api = ray.get(futures_api)
 api_time = time.time() - start
 print(f"API-based time: {api_time:.2f} seconds")
-print_memory_status("after API")
+api_memory_after = print_memory_status("after API")
 gc.collect()
 
 # Run 3-class Hugging Face sentiment analysis
 print("\nRunning 3-class Hugging Face sentiment analysis...")
-print_memory_status("before 3-class")
+class3_memory_before = print_memory_status("before 3-class")
 start = time.time()
 futures_3class = [analyze_sentiment_3class.remote(r) for r in reviews]
 results_3class = ray.get(futures_3class)
 class3_time = time.time() - start
 print(f"3-class Hugging Face time: {class3_time:.2f} seconds")
-print_memory_status("after 3-class")
+class3_memory_after = print_memory_status("after 3-class")
 gc.collect()
 
 # Create manual sentiment analysis based on keywords
@@ -100,83 +101,99 @@ def manual_sentiment_analysis(text):
 
 # Run manual sentiment analysis
 print("\nRunning Manual sentiment analysis...")
-print_memory_status("before Manual")
+manual_memory_before = print_memory_status("before Manual")
 start = time.time()
 results_manual = [manual_sentiment_analysis(r) for r in reviews]
 manual_time = time.time() - start
 print(f"Manual analysis time: {manual_time:.6f} seconds ({manual_time/len(reviews):.6f}s per review)")
-print_memory_status("after Manual")
+manual_memory_after = print_memory_status("after Manual")
 gc.collect()
 
 # Run Hugging Face (already working)
 print("\nRunning Hugging Face sentiment analysis...")
-print_memory_status("before HuggingFace")
+hf_memory_before = print_memory_status("before HuggingFace")
 start = time.time()
 futures_hf = [analyze_sentiment.remote(r) for r in reviews]
 results_hf = ray.get(futures_hf)
 hf_time = time.time() - start
 print(f"Hugging Face time: {hf_time:.2f} seconds")
-print_memory_status("after HuggingFace")
+hf_memory_after = print_memory_status("after HuggingFace")
 gc.collect()
 
 # Save results with timing data
 os.makedirs("results", exist_ok=True)
 
-# Save LLM results with timing
+# Save LLM results with timing and memory
 llm_data = {
     "results": results_llm,
     "performance": {
         "total_time": llm_time,
         "time_per_review": llm_time / len(reviews),
-        "reviews_processed": len(reviews)
+        "reviews_processed": len(reviews),
+        "memory_before": llm_memory_before,
+        "memory_after": llm_memory_after,
+        "memory_used": llm_memory_after - llm_memory_before
     }
 }
 with open("results/sentiment_output_llm.json", "w") as f:
     json.dump(llm_data, f, indent=2)
 
-# Save API results with timing
+# Save API results with timing and memory
 api_data = {
+    "dataset": dataset_name,
     "results": results_api,
     "performance": {
         "total_time": api_time,
         "time_per_review": api_time / len(reviews),
-        "reviews_processed": len(reviews)
+        "reviews_processed": len(reviews),
+        "memory_before": api_memory_before,
+        "memory_after": api_memory_after,
+        "memory_used": api_memory_after - api_memory_before
     }
 }
 with open("results/sentiment_output_api.json", "w") as f:
     json.dump(api_data, f, indent=2)
 
-# Save 3-class results with timing
+# Save 3-class results with timing and memory
 class3_data = {
     "results": results_3class,
     "performance": {
         "total_time": class3_time,
         "time_per_review": class3_time / len(reviews),
-        "reviews_processed": len(reviews)
+        "reviews_processed": len(reviews),
+        "memory_before": class3_memory_before,
+        "memory_after": class3_memory_after,
+        "memory_used": class3_memory_after - class3_memory_before
     }
 }
 with open("results/sentiment_output_3class.json", "w") as f:
     json.dump(class3_data, f, indent=2)
 
-# Save manual results with timing
+# Save manual results with timing and memory
 manual_data = {
     "results": results_manual,
     "performance": {
         "total_time": manual_time,
         "time_per_review": manual_time / len(reviews),
-        "reviews_processed": len(reviews)
+        "reviews_processed": len(reviews),
+        "memory_before": manual_memory_before,
+        "memory_after": manual_memory_after,
+        "memory_used": manual_memory_after - manual_memory_before
     }
 }
 with open("results/sentiment_output_manual.json", "w") as f:
     json.dump(manual_data, f, indent=2)
 
-# Save HuggingFace results with timing
+# Save HuggingFace results with timing and memory
 hf_data = {
     "results": results_hf,
     "performance": {
         "total_time": hf_time,
         "time_per_review": hf_time / len(reviews),
-        "reviews_processed": len(reviews)
+        "reviews_processed": len(reviews),
+        "memory_before": hf_memory_before,
+        "memory_after": hf_memory_after,
+        "memory_used": hf_memory_after - hf_memory_before
     }
 }
 with open("results/sentiment_output_hf.json", "w") as f:
