@@ -55,9 +55,59 @@ plt.show()
 # 2. Performance/Latency Comparison
 print("Creating performance comparison...")
 
-# Performance data (in seconds) - updated with real results from 100 reviews
+# Load timing data from individual JSON files
+def load_performance_data():
+    performance_data = {}
+    
+    # Load LLM performance
+    try:
+        with open("results/sentiment_output_llm.json", "r") as f:
+            llm_data = json.load(f)
+            performance_data['LLM'] = llm_data['performance']['total_time']
+    except:
+        performance_data['LLM'] = 0
+    
+    # Load API performance
+    try:
+        with open("results/sentiment_output_api.json", "r") as f:
+            api_data = json.load(f)
+            performance_data['API'] = api_data['performance']['total_time']
+    except:
+        performance_data['API'] = 0
+    
+    # Load 3-class performance
+    try:
+        with open("results/sentiment_output_3class.json", "r") as f:
+            class3_data = json.load(f)
+            performance_data['3Class'] = class3_data['performance']['total_time']
+    except:
+        performance_data['3Class'] = 0
+    
+    # Load manual performance
+    try:
+        with open("results/sentiment_output_manual.json", "r") as f:
+            manual_data = json.load(f)
+            performance_data['Manual'] = manual_data['performance']['total_time']
+    except:
+        performance_data['Manual'] = 0
+    
+    # Load HuggingFace performance
+    try:
+        with open("results/sentiment_output_hf.json", "r") as f:
+            hf_data = json.load(f)
+            performance_data['HuggingFace'] = hf_data['performance']['total_time']
+    except:
+        performance_data['HuggingFace'] = 0
+    
+    return performance_data
+
+# Get performance data
+performance_data = load_performance_data()
+
+# Performance data (in seconds) - dynamically loaded from JSON files
 models = ['LLM (DialoGPT)', 'API-based', '3-Class (RoBERTa)', 'Manual (Rule-based)', 'HuggingFace (DistilBERT)']
-latency = [36.19, 0.39, 24.57, 0.00, 6.31]  # Real results from 5-model run
+model_keys = ['LLM', 'API', '3Class', 'Manual', 'HuggingFace']
+latency = [performance_data[key] for key in model_keys]
 colors = ['orange', 'lightgreen', 'purple', 'salmon', 'skyblue']
 
 plt.figure(figsize=(14, 8))
@@ -144,15 +194,110 @@ print(f"API-based: {latency[1]:.2f} seconds")
 print(f"3-Class (RoBERTa): {latency[2]:.2f} seconds")
 print(f"Manual (Rule-based): {latency[3]:.2f} seconds")
 print(f"HuggingFace (DistilBERT): {latency[4]:.2f} seconds")
-print(f"Speedup (API vs LLM): {latency[0]/latency[1]:.1f}x faster")
+
+# Calculate speedups
+if latency[1] > 0:
+    print(f"Speedup (API vs LLM): {latency[0]/latency[1]:.1f}x faster")
 if latency[3] > 0:
     print(f"Speedup (Manual vs LLM): {latency[0]/latency[3]:.0f}x faster")
 else:
     print(f"Speedup (Manual vs LLM): Instant (∞x faster)")
 
-print("\n✅ All graphs saved to 'graphs/' directory!")
-print("📊 Generated visualizations:")
-print("   - sentiment_distribution.png")
-print("   - performance_comparison.png") 
-print("   - model_agreement.png")
+# 6. Average Text Length by Sentiment
+print("Creating average text length by sentiment...")
 
+# Calculate text lengths
+text_lengths = [len(d['text']) for d in data]
+
+# Calculate average text length by sentiment for each model
+models = ['LLM', 'API', '3Class', 'Manual', 'HuggingFace']
+avg_lengths = {}
+
+for model in models:
+    model_key = f"sentiment_{model}" if model != 'LLM' else "sentiment_LLM"
+    sentiments = [d[model_key] for d in data]
+    
+    model_avg = {}
+    for sentiment in ['POSITIVE', 'NEGATIVE', 'NEUTRAL']:
+        mask = [s == sentiment for s in sentiments]
+        if any(mask):
+            avg_length = np.mean([text_lengths[j] for j in range(len(text_lengths)) if mask[j]])
+            model_avg[sentiment] = avg_length
+        else:
+            model_avg[sentiment] = 0
+    
+    avg_lengths[model] = model_avg
+
+# Create bar chart
+fig, ax = plt.subplots(figsize=(12, 8))
+x = np.arange(len(models))
+width = 0.25
+
+colors_sentiment = {'POSITIVE': 'green', 'NEGATIVE': 'red', 'NEUTRAL': 'blue'}
+for i, sentiment in enumerate(['POSITIVE', 'NEGATIVE', 'NEUTRAL']):
+    values = [avg_lengths[model].get(sentiment, 0) for model in models]
+    ax.bar(x + i*width, values, width, label=sentiment, color=colors_sentiment[sentiment])
+
+ax.set_xlabel('Model')
+ax.set_ylabel('Average Text Length (characters)')
+ax.set_title('Average Text Length by Sentiment and Model')
+ax.set_xticks(x + width)
+ax.set_xticklabels(models)
+ax.legend()
+plt.tight_layout()
+plt.savefig('graphs/avg_text_length_by_sentiment.png', dpi=300, bbox_inches='tight')
+plt.show()
+
+# 7. Model Consistency Analysis
+print("Creating model consistency analysis...")
+
+# Analyze how consistent each model is with itself
+def calculate_consistency(model_sentiments):
+    """Calculate how consistent a model's predictions are"""
+    consistency_scores = []
+    
+    for i, sent1 in enumerate(model_sentiments):
+        for j, sent2 in enumerate(model_sentiments[i+1:], i+1):
+            # Simple similarity: check if both reviews contain same sentiment keywords
+            review1 = data[i]['text'].lower()
+            review2 = data[j]['text'].lower()
+            
+            positive_words = ['great', 'amazing', 'wonderful', 'fantastic', 'excellent', 'love', 'enjoy', 'good']
+            negative_words = ['terrible', 'awful', 'horrible', 'bad', 'disappointing', 'waste', 'worst', 'hate']
+            
+            review1_pos = any(word in review1 for word in positive_words)
+            review1_neg = any(word in review1 for word in negative_words)
+            review2_pos = any(word in review2 for word in positive_words)
+            review2_neg = any(word in review2 for word in negative_words)
+            
+            # If reviews have similar sentiment indicators, check if model agrees
+            if (review1_pos and review2_pos) or (review1_neg and review2_neg):
+                consistency_scores.append(1 if sent1 == sent2 else 0)
+    
+    return np.mean(consistency_scores) * 100 if consistency_scores else 0
+
+model_consistencies = {}
+for model in models:
+    model_key = f"sentiment_{model}" if model != 'LLM' else "sentiment_LLM"
+    model_sentiments = [d[model_key] for d in data]
+    consistency = calculate_consistency(model_sentiments)
+    model_consistencies[model] = consistency
+
+# Plot consistency
+plt.figure(figsize=(10, 6))
+bars = plt.bar(models, [model_consistencies[m] for m in models], color=colors)
+plt.xlabel('Model')
+plt.ylabel('Consistency Score (%)')
+plt.title('Model Consistency Analysis')
+plt.ylim(0, 100)
+
+# Add value labels
+for bar, value in zip(bars, [model_consistencies[m] for m in models]):
+    plt.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 1, 
+             f'{value:.1f}%', ha='center', va='bottom')
+
+plt.tight_layout()
+plt.savefig('graphs/model_consistency.png', dpi=300, bbox_inches='tight')
+plt.show()
+
+print("\nAll graphs saved to 'graphs/' directory")

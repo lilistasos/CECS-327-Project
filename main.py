@@ -7,18 +7,34 @@ import json
 import os
 import time
 import random
+import psutil
+import gc
 
 ray.init()
+
+# Memory monitoring functions
+def get_memory_usage():
+    """Get current memory usage in MB"""
+    process = psutil.Process(os.getpid())
+    return process.memory_info().rss / 1024 / 1024
+
+def print_memory_status(stage=""):
+    """Print current memory usage"""
+    memory_mb = get_memory_usage()
+    print(f"Memory usage {stage}: {memory_mb:.1f} MB")
 
 print("API KEY:", os.getenv("OPENAI_API_KEY"))
 
 # Read the CSV file
-df = pd.read_csv("data/DisneylandReviews.csv", encoding="latin1").head(100)  # Increased to 100 for better scalability demo
+df = pd.read_csv("data/DisneylandReviews.csv", encoding="latin1").head(1000)  # Increased to 1000 for scalability testing
 # Adjust 'Review_Text' to the actual column name for review text
 reviews = df['Review_Text'].dropna().tolist()
 
 # Inspect the columns to find the review text column
 print(df.columns)
+print(f"Dataset size: {len(df)} reviews")
+print(f"Reviews to process: {len(reviews)} reviews")
+print_memory_status("after loading data")
 
 # Memory-safe version with five approaches
 print("Available models:")
@@ -30,24 +46,36 @@ print("5. Hugging Face (DistilBERT) - Memory Safe ✅")
 
 # Run LLM sentiment analysis
 print("\nRunning LLM sentiment analysis...")
+print_memory_status("before LLM")
 start = time.time()
 futures_llm = [analyze_sentiment_llm_safe.remote(r) for r in reviews]
 results_llm = ray.get(futures_llm)
-print(f"LLM time: {time.time() - start:.2f} seconds")
+llm_time = time.time() - start
+print(f"LLM time: {llm_time:.2f} seconds")
+print_memory_status("after LLM")
+gc.collect()  # Force garbage collection
 
 # Run API-based sentiment analysis
 print("\nRunning API-based sentiment analysis...")
+print_memory_status("before API")
 start = time.time()
 futures_api = [analyze_sentiment_api_simple.remote(r) for r in reviews]
 results_api = ray.get(futures_api)
-print(f"API-based time: {time.time() - start:.2f} seconds")
+api_time = time.time() - start
+print(f"API-based time: {api_time:.2f} seconds")
+print_memory_status("after API")
+gc.collect()
 
 # Run 3-class Hugging Face sentiment analysis
 print("\nRunning 3-class Hugging Face sentiment analysis...")
+print_memory_status("before 3-class")
 start = time.time()
 futures_3class = [analyze_sentiment_3class.remote(r) for r in reviews]
 results_3class = ray.get(futures_3class)
-print(f"3-class Hugging Face time: {time.time() - start:.2f} seconds")
+class3_time = time.time() - start
+print(f"3-class Hugging Face time: {class3_time:.2f} seconds")
+print_memory_status("after 3-class")
+gc.collect()
 
 # Create manual sentiment analysis based on keywords
 def manual_sentiment_analysis(text):
@@ -72,29 +100,87 @@ def manual_sentiment_analysis(text):
 
 # Run manual sentiment analysis
 print("\nRunning Manual sentiment analysis...")
+print_memory_status("before Manual")
 start = time.time()
 results_manual = [manual_sentiment_analysis(r) for r in reviews]
-print(f"Manual analysis time: {time.time() - start:.2f} seconds")
+manual_time = time.time() - start
+print(f"Manual analysis time: {manual_time:.6f} seconds ({manual_time/len(reviews):.6f}s per review)")
+print_memory_status("after Manual")
+gc.collect()
 
 # Run Hugging Face (already working)
 print("\nRunning Hugging Face sentiment analysis...")
+print_memory_status("before HuggingFace")
 start = time.time()
 futures_hf = [analyze_sentiment.remote(r) for r in reviews]
 results_hf = ray.get(futures_hf)
-print(f"Hugging Face time: {time.time() - start:.2f} seconds")
+hf_time = time.time() - start
+print(f"Hugging Face time: {hf_time:.2f} seconds")
+print_memory_status("after HuggingFace")
+gc.collect()
 
-# Save results
+# Save results with timing data
 os.makedirs("results", exist_ok=True)
+
+# Save LLM results with timing
+llm_data = {
+    "results": results_llm,
+    "performance": {
+        "total_time": llm_time,
+        "time_per_review": llm_time / len(reviews),
+        "reviews_processed": len(reviews)
+    }
+}
 with open("results/sentiment_output_llm.json", "w") as f:
-    json.dump(results_llm, f, indent=2)
+    json.dump(llm_data, f, indent=2)
+
+# Save API results with timing
+api_data = {
+    "results": results_api,
+    "performance": {
+        "total_time": api_time,
+        "time_per_review": api_time / len(reviews),
+        "reviews_processed": len(reviews)
+    }
+}
 with open("results/sentiment_output_api.json", "w") as f:
-    json.dump(results_api, f, indent=2)
+    json.dump(api_data, f, indent=2)
+
+# Save 3-class results with timing
+class3_data = {
+    "results": results_3class,
+    "performance": {
+        "total_time": class3_time,
+        "time_per_review": class3_time / len(reviews),
+        "reviews_processed": len(reviews)
+    }
+}
 with open("results/sentiment_output_3class.json", "w") as f:
-    json.dump(results_3class, f, indent=2)
+    json.dump(class3_data, f, indent=2)
+
+# Save manual results with timing
+manual_data = {
+    "results": results_manual,
+    "performance": {
+        "total_time": manual_time,
+        "time_per_review": manual_time / len(reviews),
+        "reviews_processed": len(reviews)
+    }
+}
 with open("results/sentiment_output_manual.json", "w") as f:
-    json.dump(results_manual, f, indent=2)
+    json.dump(manual_data, f, indent=2)
+
+# Save HuggingFace results with timing
+hf_data = {
+    "results": results_hf,
+    "performance": {
+        "total_time": hf_time,
+        "time_per_review": hf_time / len(reviews),
+        "reviews_processed": len(reviews)
+    }
+}
 with open("results/sentiment_output_hf.json", "w") as f:
-    json.dump(results_hf, f, indent=2)
+    json.dump(hf_data, f, indent=2)
 
 # Create comparison results
 comparison_results = []
