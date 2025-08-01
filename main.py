@@ -1,7 +1,7 @@
 # libraries need for this project:
 
 import ray
-from tasks import analyze_sentiment, analyze_sentiment_api_simple, analyze_sentiment_llm_safe, analyze_sentiment_3class
+from tasks import analyze_sentiment, analyze_sentiment_api_simple, analyze_sentiment_llm_safe, analyze_sentiment_3class, analyze_sentiment_manual, analyze_sentiment_vader
 import pandas as pd
 import json
 import os
@@ -24,8 +24,6 @@ def print_memory_status(stage=""):
     print(f"Memory usage {stage}: {memory_mb:.1f} MB")
     return memory_mb
 
-print("API KEY:", os.getenv("OPENAI_API_KEY"))
-
 # Read the CSV file
 df = pd.read_csv("data/DisneylandReviews.csv", encoding="latin1").head(1000)  # Increased to 1000 for scalability testing
 # Adjust 'Review_Text' to the actual column name for review text
@@ -37,13 +35,14 @@ print(f"Dataset size: {len(df)} reviews")
 print(f"Reviews to process: {len(reviews)} reviews")
 print_memory_status("after loading data")
 
-# Memory-safe version with five approaches
+# Memory-safe version with six approaches
 print("Available models:")
 print("1. LLM (DialoGPT-small) - Memory Safe")
 print("2. API-based (Twitter RoBERTa) - Memory Safe") 
 print("3. Hugging Face 3-class (RoBERTa) - Memory Safe")
 print("4. Manual Sentiment Analysis - Memory Safe")
 print("5. Hugging Face (DistilBERT) - Memory Safe")
+print("6. VADER (Valence Aware Dictionary) - Memory Safe")
 
 # Run LLM sentiment analysis
 print("\nRunning LLM sentiment analysis...")
@@ -78,32 +77,12 @@ print(f"3-class Hugging Face time: {class3_time:.2f} seconds")
 class3_memory_after = print_memory_status("after 3-class")
 gc.collect()
 
-# Create manual sentiment analysis based on keywords
-def manual_sentiment_analysis(text):
-    text_lower = text.lower()
-    
-    # Positive keywords
-    positive_words = ['great', 'amazing', 'wonderful', 'fantastic', 'excellent', 'love', 'enjoy', 'good', 'nice', 'fabulous', 'exciting']
-    # Negative keywords  
-    negative_words = ['terrible', 'awful', 'horrible', 'bad', 'disappointing', 'waste', 'let down', 'worst', 'hate', 'dislike', 'poor']
-    
-    positive_count = sum(1 for word in positive_words if word in text_lower)
-    negative_count = sum(1 for word in negative_words if word in text_lower)
-    
-    if positive_count > negative_count:
-        sentiment = "POSITIVE"
-    elif negative_count > positive_count:
-        sentiment = "NEGATIVE"
-    else:
-        sentiment = "NEUTRAL"
-    
-    return {"text": text, "sentiment": sentiment}
-
 # Run manual sentiment analysis
 print("\nRunning Manual sentiment analysis...")
 manual_memory_before = print_memory_status("before Manual")
 start = time.time()
-results_manual = [manual_sentiment_analysis(r) for r in reviews]
+futures_manual = [analyze_sentiment_manual.remote(r) for r in reviews]
+results_manual = ray.get(futures_manual)
 manual_time = time.time() - start
 print(f"Manual analysis time: {manual_time:.6f} seconds ({manual_time/len(reviews):.6f}s per review)")
 manual_memory_after = print_memory_status("after Manual")
@@ -118,6 +97,17 @@ results_hf = ray.get(futures_hf)
 hf_time = time.time() - start
 print(f"Hugging Face time: {hf_time:.2f} seconds")
 hf_memory_after = print_memory_status("after HuggingFace")
+gc.collect()
+
+# Run VADER sentiment analysis
+print("\nRunning VADER sentiment analysis...")
+vader_memory_before = print_memory_status("before VADER")
+start = time.time()
+futures_vader = [analyze_sentiment_vader.remote(r) for r in reviews]
+results_vader = ray.get(futures_vader)
+vader_time = time.time() - start
+print(f"VADER time: {vader_time:.2f} seconds")
+vader_memory_after = print_memory_status("after VADER")
 gc.collect()
 
 # Save results with timing data
@@ -140,7 +130,6 @@ with open("results/sentiment_output_llm.json", "w") as f:
 
 # Save API results with timing and memory
 api_data = {
-    "dataset": dataset_name,
     "results": results_api,
     "performance": {
         "total_time": api_time,
@@ -199,6 +188,21 @@ hf_data = {
 with open("results/sentiment_output_hf.json", "w") as f:
     json.dump(hf_data, f, indent=2)
 
+# Save VADER results with timing and memory
+vader_data = {
+    "results": results_vader,
+    "performance": {
+        "total_time": vader_time,
+        "time_per_review": vader_time / len(reviews),
+        "reviews_processed": len(reviews),
+        "memory_before": vader_memory_before,
+        "memory_after": vader_memory_after,
+        "memory_used": vader_memory_after - vader_memory_before
+    }
+}
+with open("results/sentiment_output_vader.json", "w") as f:
+    json.dump(vader_data, f, indent=2)
+
 # Create comparison results
 comparison_results = []
 for i in range(len(reviews)):
@@ -208,7 +212,8 @@ for i in range(len(reviews)):
         "sentiment_API": results_api[i]["sentiment"],
         "sentiment_3Class": results_3class[i]["sentiment"],
         "sentiment_Manual": results_manual[i]["sentiment"],
-        "sentiment_HuggingFace": results_hf[i]["sentiment"]
+        "sentiment_HuggingFace": results_hf[i]["sentiment"],
+        "sentiment_VADER": results_vader[i]["sentiment"]
     })
 
 with open("results/sentiment_output_comparison.json", "w") as f:
@@ -226,6 +231,7 @@ for i in range(min(3, len(comparison_results))):
     print(f"  3-Class: {d['sentiment_3Class']}")
     print(f"  Manual: {d['sentiment_Manual']}")
     print(f"  HuggingFace: {d['sentiment_HuggingFace']}")
+    print(f"  VADER: {d['sentiment_VADER']}")
     print()
 
 print("\nSuccess! You now have:")
@@ -234,5 +240,6 @@ print("- API-based sentiment analysis (Cloud-based)")
 print("- 3-class Hugging Face sentiment analysis (RoBERTa)")
 print("- Manual sentiment analysis (Rule-based)")
 print("- Hugging Face sentiment analysis (DistilBERT)")
-print("- Performance comparison between all five approaches")
+print("- VADER sentiment analysis (Valence Aware Dictionary)")
+print("- Performance comparison between all six approaches")
 print("- Results saved for visualization and reporting")

@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 load_dotenv()
 import os
 import torch
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 @ray.remote
 def analyze_sentiment(text):
@@ -19,8 +20,6 @@ def analyze_sentiment(text):
     truncated_text = tokenizer.decode(tokens, skip_special_tokens=True)
     result = sentiment_pipeline(truncated_text)
     return {"text": truncated_text, "sentiment": result[0]["label"]}
-
-
 
 @ray.remote
 def analyze_sentiment_api_simple(text):
@@ -52,6 +51,53 @@ def analyze_sentiment_api_simple(text):
     if positive_score > negative_score and positive_score > 0:
         sentiment = "POSITIVE"
     elif negative_score > positive_score and negative_score > 0:
+        sentiment = "NEGATIVE"
+    else:
+        sentiment = "NEUTRAL"
+    
+    return {"text": text, "sentiment": sentiment}
+
+@ray.remote
+def analyze_sentiment_vader(text):
+    """VADER sentiment analysis - specifically designed for social media text"""
+    global vader_analyzer
+    try:
+        vader_analyzer
+    except NameError:
+        vader_analyzer = SentimentIntensityAnalyzer()
+    
+    # Get VADER sentiment scores
+    scores = vader_analyzer.polarity_scores(text)
+    
+    # VADER provides compound score between -1 and 1
+    compound_score = scores['compound']
+    
+    # Map VADER compound score to our sentiment categories
+    if compound_score >= 0.05:
+        sentiment = "POSITIVE"
+    elif compound_score <= -0.05:
+        sentiment = "NEGATIVE"
+    else:
+        sentiment = "NEUTRAL"
+    
+    return {"text": text, "sentiment": sentiment}
+
+@ray.remote
+def analyze_sentiment_manual(text):
+    """Manual rule-based sentiment analysis using keyword matching"""
+    text_lower = text.lower()
+    
+    # Positive keywords
+    positive_words = ['great', 'amazing', 'wonderful', 'fantastic', 'excellent', 'love', 'enjoy', 'good', 'nice', 'fabulous', 'exciting']
+    # Negative keywords  
+    negative_words = ['terrible', 'awful', 'horrible', 'bad', 'disappointing', 'waste', 'let down', 'worst', 'hate', 'dislike', 'poor']
+    
+    positive_count = sum(1 for word in positive_words if word in text_lower)
+    negative_count = sum(1 for word in negative_words if word in text_lower)
+    
+    if positive_count > negative_count:
+        sentiment = "POSITIVE"
+    elif negative_count > positive_count:
         sentiment = "NEGATIVE"
     else:
         sentiment = "NEUTRAL"

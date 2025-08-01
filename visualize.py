@@ -18,34 +18,38 @@ api_labels = [d["sentiment_API"] for d in data]
 threeclass_labels = [d["sentiment_3Class"] for d in data]
 manual_labels = [d["sentiment_Manual"] for d in data]
 hf_labels = [d["sentiment_HuggingFace"] for d in data]
+vader_labels = [d["sentiment_VADER"] for d in data]
 
 llm_counts = Counter(llm_labels)
 api_counts = Counter(api_labels)
 threeclass_counts = Counter(threeclass_labels)
 manual_counts = Counter(manual_labels)
 hf_counts = Counter(hf_labels)
+vader_counts = Counter(vader_labels)
 
-labels = sorted(set(llm_labels) | set(api_labels) | set(threeclass_labels) | set(manual_labels) | set(hf_labels))
+labels = sorted(set(llm_labels) | set(api_labels) | set(threeclass_labels) | set(manual_labels) | set(hf_labels) | set(vader_labels))
 llm_values = [llm_counts.get(l, 0) for l in labels]
 api_values = [api_counts.get(l, 0) for l in labels]
 threeclass_values = [threeclass_counts.get(l, 0) for l in labels]
 manual_values = [manual_counts.get(l, 0) for l in labels]
 hf_values = [hf_counts.get(l, 0) for l in labels]
+vader_values = [vader_counts.get(l, 0) for l in labels]
 
 # Create the sentiment distribution bar chart
-plt.figure(figsize=(16, 8))
+plt.figure(figsize=(18, 8))
 x = np.arange(len(labels))
-width = 0.15
+width = 0.12
 
-plt.bar(x - width*2, llm_values, width, label="LLM (DialoGPT)", color='orange')
-plt.bar(x - width*1, api_values, width, label="API-based", color='lightgreen')
-plt.bar(x, threeclass_values, width, label="3-Class (RoBERTa)", color='purple')
-plt.bar(x + width*1, manual_values, width, label="Manual (Rule-based)", color='salmon')
-plt.bar(x + width*2, hf_values, width, label="HuggingFace (DistilBERT)", color='skyblue')
+plt.bar(x - width*2.5, llm_values, width, label="LLM (DialoGPT)", color='orange')
+plt.bar(x - width*1.5, api_values, width, label="API-based", color='lightgreen')
+plt.bar(x - width*0.5, threeclass_values, width, label="3-Class (RoBERTa)", color='purple')
+plt.bar(x + width*0.5, manual_values, width, label="Manual (Rule-based)", color='salmon')
+plt.bar(x + width*1.5, hf_values, width, label="HuggingFace (DistilBERT)", color='skyblue')
+plt.bar(x + width*2.5, vader_values, width, label="VADER", color='red')
 
 plt.xlabel('Sentiment')
 plt.ylabel('Count')
-plt.title('Sentiment Distribution Comparison Across All 5 Models')
+plt.title('Sentiment Distribution Comparison Across All 6 Models')
 plt.xticks(x, labels)
 plt.legend()
 plt.tight_layout()
@@ -99,16 +103,24 @@ def load_performance_data():
     except:
         performance_data['HuggingFace'] = 0
     
+    # Load VADER performance
+    try:
+        with open("results/sentiment_output_vader.json", "r") as f:
+            vader_data = json.load(f)
+            performance_data['VADER'] = vader_data['performance']['total_time']
+    except:
+        performance_data['VADER'] = 0
+    
     return performance_data
 
 # Get performance data
 performance_data = load_performance_data()
 
 # Performance data (in seconds) - dynamically loaded from JSON files
-models = ['LLM (DialoGPT)', 'API-based', '3-Class (RoBERTa)', 'Manual (Rule-based)', 'HuggingFace (DistilBERT)']
-model_keys = ['LLM', 'API', '3Class', 'Manual', 'HuggingFace']
+models = ['LLM (DialoGPT)', 'API-based', '3-Class (RoBERTa)', 'Manual (Rule-based)', 'HuggingFace (DistilBERT)', 'VADER']
+model_keys = ['LLM', 'API', '3Class', 'Manual', 'HuggingFace', 'VADER']
 latency = [performance_data[key] for key in model_keys]
-colors = ['orange', 'lightgreen', 'purple', 'salmon', 'skyblue']
+colors = ['orange', 'lightgreen', 'purple', 'salmon', 'skyblue', 'red']
 
 plt.figure(figsize=(14, 8))
 bars = plt.bar(models, latency, color=colors)
@@ -136,16 +148,22 @@ print("Creating model agreement analysis...")
 # Count how many models agree on each review
 agreement_counts = []
 for d in data:
-    sentiments = [d["sentiment_LLM"], d["sentiment_API"], d["sentiment_3Class"], d["sentiment_Manual"], d["sentiment_HuggingFace"]]
-    unique_sentiments = len(set(sentiments))
-    if unique_sentiments == 1:
-        agreement_counts.append("All Agree")
-    elif unique_sentiments == 2:
-        agreement_counts.append("2 Agree")
-    elif unique_sentiments == 3:
-        agreement_counts.append("3 Agree")
-    elif unique_sentiments == 4:
+    sentiments = [d["sentiment_LLM"], d["sentiment_API"], d["sentiment_3Class"], d["sentiment_Manual"], d["sentiment_HuggingFace"], d["sentiment_VADER"]]
+    
+    # Count occurrences of each sentiment
+    sentiment_counts = Counter(sentiments)
+    max_count = max(sentiment_counts.values())
+    
+    if max_count == 6:
+        agreement_counts.append("All 6 Agree")
+    elif max_count == 5:
+        agreement_counts.append("5 Agree")
+    elif max_count == 4:
         agreement_counts.append("4 Agree")
+    elif max_count == 3:
+        agreement_counts.append("3 Agree")
+    elif max_count == 2:
+        agreement_counts.append("2 Agree")
     else:
         agreement_counts.append("All Disagree")
 
@@ -155,7 +173,7 @@ agreement_values = list(agreement_counter.values())
 
 plt.figure(figsize=(8, 6))
 plt.pie(agreement_values, labels=agreement_labels, autopct='%1.1f%%', startangle=90)
-plt.title('Model Agreement Analysis (5 Models)')
+plt.title('Model Agreement Analysis (6 Models)')
 plt.axis('equal')
 plt.tight_layout()
 plt.savefig('graphs/model_agreement.png', dpi=300, bbox_inches='tight')
@@ -163,18 +181,18 @@ plt.show()
 
 # 4. Detailed Comparison Table
 print("\nDetailed Comparison Results:")
-print("=" * 120)
-print(f"{'Review':<30} {'LLM':<12} {'API':<12} {'3-Class':<12} {'Manual':<12} {'HuggingFace':<12}")
-print("=" * 120)
+print("=" * 140)
+print(f"{'Review':<30} {'LLM':<12} {'API':<12} {'3-Class':<12} {'Manual':<12} {'HuggingFace':<12} {'VADER':<12}")
+print("=" * 140)
 
 for i, d in enumerate(data[:10]):  # Show first 10 reviews
     review_preview = d['text'][:27] + "..." if len(d['text']) > 30 else d['text']
-    print(f"{review_preview:<30} {d['sentiment_LLM']:<12} {d['sentiment_API']:<12} {d['sentiment_3Class']:<12} {d['sentiment_Manual']:<12} {d['sentiment_HuggingFace']:<12}")
+    print(f"{review_preview:<30} {d['sentiment_LLM']:<12} {d['sentiment_API']:<12} {d['sentiment_3Class']:<12} {d['sentiment_Manual']:<12} {d['sentiment_HuggingFace']:<12} {d['sentiment_VADER']:<12}")
 
 # 5. Summary Statistics
-print("\n" + "=" * 120)
+print("\n" + "=" * 140)
 print("SUMMARY STATISTICS")
-print("=" * 120)
+print("=" * 140)
 
 print(f"Total Reviews Analyzed: {len(data)}")
 print(f"LLM - POSITIVE: {llm_counts['POSITIVE']}, NEGATIVE: {llm_counts['NEGATIVE']}, NEUTRAL: {llm_counts['NEUTRAL']}")
@@ -182,9 +200,16 @@ print(f"API-based - POSITIVE: {api_counts['POSITIVE']}, NEGATIVE: {api_counts['N
 print(f"3-Class - POSITIVE: {threeclass_counts['POSITIVE']}, NEGATIVE: {threeclass_counts['NEGATIVE']}, NEUTRAL: {threeclass_counts['NEUTRAL']}")
 print(f"Manual - POSITIVE: {manual_counts['POSITIVE']}, NEGATIVE: {manual_counts['NEGATIVE']}, NEUTRAL: {manual_counts['NEUTRAL']}")
 print(f"HuggingFace - POSITIVE: {hf_counts['POSITIVE']}, NEGATIVE: {hf_counts['NEGATIVE']}, NEUTRAL: {hf_counts['NEUTRAL']}")
+print(f"VADER - POSITIVE: {vader_counts['POSITIVE']}, NEGATIVE: {vader_counts['NEGATIVE']}, NEUTRAL: {vader_counts['NEUTRAL']}")
 
-# Calculate agreement percentage
-all_agree = sum(1 for d in data if len(set([d["sentiment_LLM"], d["sentiment_API"], d["sentiment_3Class"], d["sentiment_Manual"], d["sentiment_HuggingFace"]])) == 1)
+# Calculate agreement percentage (using corrected logic)
+all_agree = 0
+for d in data:
+    sentiments = [d["sentiment_LLM"], d["sentiment_API"], d["sentiment_3Class"], d["sentiment_Manual"], d["sentiment_HuggingFace"], d["sentiment_VADER"]]
+    sentiment_counts = Counter(sentiments)
+    if max(sentiment_counts.values()) == 6:
+        all_agree += 1
+
 agreement_percentage = (all_agree / len(data)) * 100
 print(f"Model Agreement Rate: {agreement_percentage:.1f}%")
 
@@ -194,6 +219,7 @@ print(f"API-based: {latency[1]:.2f} seconds")
 print(f"3-Class (RoBERTa): {latency[2]:.2f} seconds")
 print(f"Manual (Rule-based): {latency[3]:.2f} seconds")
 print(f"HuggingFace (DistilBERT): {latency[4]:.2f} seconds")
+print(f"VADER: {latency[5]:.2f} seconds")
 
 # Calculate speedups
 if latency[1] > 0:
@@ -202,6 +228,8 @@ if latency[3] > 0:
     print(f"Speedup (Manual vs LLM): {latency[0]/latency[3]:.0f}x faster")
 else:
     print(f"Speedup (Manual vs LLM): Instant (∞x faster)")
+if latency[5] > 0:
+    print(f"Speedup (VADER vs LLM): {latency[0]/latency[5]:.0f}x faster")
 
 # 6. Average Text Length by Sentiment
 print("Creating average text length by sentiment...")
@@ -210,7 +238,7 @@ print("Creating average text length by sentiment...")
 text_lengths = [len(d['text']) for d in data]
 
 # Calculate average text length by sentiment for each model
-models = ['LLM', 'API', '3Class', 'Manual', 'HuggingFace']
+models = ['LLM', 'API', '3Class', 'Manual', 'HuggingFace', 'VADER']
 avg_lengths = {}
 
 for model in models:
@@ -308,8 +336,8 @@ def load_memory_data():
     memory_data = {}
     
     # Load real memory usage from performance files
-    models = ['llm', 'api', '3class', 'manual', 'hf']
-    model_names = ['LLM', 'API', '3Class', 'Manual', 'HuggingFace']
+    models = ['llm', 'api', '3class', 'manual', 'hf', 'vader']
+    model_names = ['LLM', 'API', '3Class', 'Manual', 'HuggingFace', 'VADER']
     
     for model, model_name in zip(models, model_names):
         try:
@@ -317,7 +345,12 @@ def load_memory_data():
                 data = json.load(f)
                 # Use real memory data if available
                 if 'performance' in data and 'memory_used' in data['performance']:
-                    memory_data[model_name] = data['performance']['memory_used']
+                    memory_used = data['performance']['memory_used']
+                    # Handle negative memory usage (memory was freed)
+                    if memory_used < 0:
+                        memory_data[model_name] = abs(memory_used)  # Use absolute value
+                    else:
+                        memory_data[model_name] = memory_used
                 else:
                     # Fallback to estimated values if real data not available
                     if model == 'llm':
@@ -330,6 +363,8 @@ def load_memory_data():
                         memory_data[model_name] = 2   # Minimal
                     elif model == 'hf':
                         memory_data[model_name] = 128  # Medium model
+                    elif model == 'vader':
+                        memory_data[model_name] = 4   # Very small
         except:
             # Default memory estimates if files not found
             if model == 'llm':
@@ -342,11 +377,13 @@ def load_memory_data():
                 memory_data[model_name] = 2
             elif model == 'hf':
                 memory_data[model_name] = 128
+            elif model == 'vader':
+                memory_data[model_name] = 4
     
     return memory_data
 
 memory_usage = load_memory_data()
-models = ['LLM', 'API', '3Class', 'Manual', 'HuggingFace']
+models = ['LLM', 'API', '3Class', 'Manual', 'HuggingFace', 'VADER']
 memory_values = [memory_usage[model] for model in models]
 
 # Create memory usage comparison
@@ -359,8 +396,8 @@ for bar, value in zip(bars, memory_values):
              f'{value} MB', ha='center', va='bottom', fontweight='bold')
 
 plt.xlabel('Sentiment Analysis Models')
-plt.ylabel('Estimated Memory Usage (MB)')
-plt.title('Memory Usage Comparison')
+plt.ylabel('Memory Usage (MB)')
+plt.title('Memory Usage Comparison\n')
 plt.xticks(rotation=45)
 plt.grid(True, alpha=0.3, axis='y')
 plt.tight_layout()
