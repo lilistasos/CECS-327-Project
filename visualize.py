@@ -290,8 +290,9 @@ def calculate_consistency(model_sentiments):
             review1 = data[i]['text'].lower()
             review2 = data[j]['text'].lower()
             
-            positive_words = ['great', 'amazing', 'wonderful', 'fantastic', 'excellent', 'love', 'enjoy', 'good']
-            negative_words = ['terrible', 'awful', 'horrible', 'bad', 'disappointing', 'waste', 'worst', 'hate']
+            # Use the same word lists as in tasks.py for consistency
+            positive_words = ['great', 'amazing', 'wonderful', 'fantastic', 'excellent', 'love', 'enjoy', 'good', 'nice', 'fabulous', 'exciting', 'fun', 'happy', 'enjoyed']
+            negative_words = ['terrible', 'awful', 'horrible', 'bad', 'disappointing', 'waste', 'let down', 'worst', 'hate', 'dislike', 'poor']
             
             review1_pos = any(word in review1 for word in positive_words)
             review1_neg = any(word in review1 for word in negative_words)

@@ -6,18 +6,36 @@ import os
 import torch
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
+# Global word lists for sentiment analysis
+POSITIVE_WORDS = ['great', 'amazing', 'wonderful', 'fantastic', 'excellent', 'love', 'enjoy', 'good', 'nice', 'fabulous', 'exciting', 'fun', 'happy', 'enjoyed']
+NEGATIVE_WORDS = ['terrible', 'awful', 'horrible', 'bad', 'disappointing', 'waste', 'let down', 'worst', 'hate', 'dislike', 'poor']
+VERY_POSITIVE_WORDS = ['amazing', 'fantastic', 'excellent', 'wonderful', 'love', 'fabulous', 'perfect']
+VERY_NEGATIVE_WORDS = ['let down', 'dislike', 'poor', 'terrible', 'awful']
+
+# Global word lists for LLM response parsing
+LLM_POSITIVE_INDICATORS = ['positive', 'good', 'great', 'excellent', 'amazing', 'wonderful']
+LLM_NEGATIVE_INDICATORS = ['negative', 'bad', 'terrible', 'awful', 'horrible', 'poor']
+LLM_NEUTRAL_INDICATORS = ['neutral', 'okay', 'fine', 'average', 'normal']
+
+# Global model variables (will be initialized on first use)
+sentiment_pipeline = None
+distilbert_tokenizer = None
+llm_tokenizer = None
+llm_model = None
+sentiment_3class_pipeline = None
+vader_analyzer = None
+
 @ray.remote
 def analyze_sentiment(text):
-    global sentiment_pipeline, tokenizer
-    try:
-        sentiment_pipeline
-        tokenizer
-    except NameError:
+    """Use Hugging Face pipeline for sentiment analysis"""
+    global sentiment_pipeline, distilbert_tokenizer
+    if sentiment_pipeline is None:
         sentiment_pipeline = pipeline("sentiment-analysis")
-        tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased-finetuned-sst-2-english")
+        distilbert_tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased-finetuned-sst-2-english")
+    
     # Truncate to 512 tokens
-    tokens = tokenizer.encode(text, truncation=True, max_length=512)
-    truncated_text = tokenizer.decode(tokens, skip_special_tokens=True)
+    tokens = distilbert_tokenizer.encode(text, truncation=True, max_length=512)
+    truncated_text = distilbert_tokenizer.decode(tokens, skip_special_tokens=True)
     result = sentiment_pipeline(truncated_text)
     return {"text": truncated_text, "sentiment": result[0]["label"]}
 
@@ -31,17 +49,11 @@ def analyze_sentiment_api_simple(text):
     
     text_lower = text.lower()
     
-    # More sophisticated keyword analysis
-    very_positive_words = ['amazing', 'fantastic', 'excellent', 'wonderful', 'love', 'fabulous', 'perfect']
-    positive_words = ['great', 'good', 'enjoy', 'nice', 'exciting', 'fun', 'happy', 'enjoyed']
-    negative_words = ['terrible', 'awful', 'horrible', 'bad', 'disappointing', 'waste', 'worst', 'hate']
-    very_negative_words = ['let down', 'dislike', 'poor', 'terrible', 'awful']
-    
-    # Count different types of sentiment words
-    very_pos_count = sum(1 for word in very_positive_words if word in text_lower)
-    pos_count = sum(1 for word in positive_words if word in text_lower)
-    neg_count = sum(1 for word in negative_words if word in text_lower)
-    very_neg_count = sum(1 for word in very_negative_words if word in text_lower)
+    # Count different types of sentiment words using global lists
+    very_pos_count = sum(1 for word in VERY_POSITIVE_WORDS if word in text_lower)
+    pos_count = sum(1 for word in POSITIVE_WORDS if word in text_lower)
+    neg_count = sum(1 for word in NEGATIVE_WORDS if word in text_lower)
+    very_neg_count = sum(1 for word in VERY_NEGATIVE_WORDS if word in text_lower)
     
     # Calculate sentiment score
     positive_score = very_pos_count * 2 + pos_count
@@ -61,9 +73,7 @@ def analyze_sentiment_api_simple(text):
 def analyze_sentiment_vader(text):
     """VADER sentiment analysis - specifically designed for social media text"""
     global vader_analyzer
-    try:
-        vader_analyzer
-    except NameError:
+    if vader_analyzer is None:
         vader_analyzer = SentimentIntensityAnalyzer()
     
     # Get VADER sentiment scores
@@ -87,13 +97,9 @@ def analyze_sentiment_manual(text):
     """Manual rule-based sentiment analysis using keyword matching"""
     text_lower = text.lower()
     
-    # Positive keywords
-    positive_words = ['great', 'amazing', 'wonderful', 'fantastic', 'excellent', 'love', 'enjoy', 'good', 'nice', 'fabulous', 'exciting']
-    # Negative keywords  
-    negative_words = ['terrible', 'awful', 'horrible', 'bad', 'disappointing', 'waste', 'let down', 'worst', 'hate', 'dislike', 'poor']
-    
-    positive_count = sum(1 for word in positive_words if word in text_lower)
-    negative_count = sum(1 for word in negative_words if word in text_lower)
+    # Use global word lists
+    positive_count = sum(1 for word in POSITIVE_WORDS if word in text_lower)
+    negative_count = sum(1 for word in NEGATIVE_WORDS if word in text_lower)
     
     if positive_count > negative_count:
         sentiment = "POSITIVE"
@@ -111,10 +117,7 @@ def analyze_sentiment_llm_safe(text):
     This uses a smaller model that won't crash the system but still demonstrates LLM capabilities.
     """
     global llm_tokenizer, llm_model
-    try:
-        llm_tokenizer
-        llm_model
-    except NameError:
+    if llm_tokenizer is None or llm_model is None:
         # Use a smaller, memory-safe LLM
         model_name = "microsoft/DialoGPT-small"  # Only 117M parameters
         llm_tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -148,21 +151,18 @@ def analyze_sentiment_llm_safe(text):
         # Extract the generated part (after the prompt)
         generated_text = response[len(prompt):].strip().lower()
         
-        # More robust sentiment parsing
-        if any(word in generated_text for word in ['positive', 'good', 'great', 'excellent', 'amazing', 'wonderful']):
+        # More robust sentiment parsing using global indicators
+        if any(word in generated_text for word in LLM_POSITIVE_INDICATORS):
             sentiment = "POSITIVE"
-        elif any(word in generated_text for word in ['negative', 'bad', 'terrible', 'awful', 'horrible', 'poor']):
+        elif any(word in generated_text for word in LLM_NEGATIVE_INDICATORS):
             sentiment = "NEGATIVE"
-        elif any(word in generated_text for word in ['neutral', 'okay', 'fine', 'average', 'normal']):
+        elif any(word in generated_text for word in LLM_NEUTRAL_INDICATORS):
             sentiment = "NEUTRAL"
         else:
             # Fallback: analyze the original text for sentiment clues
             text_lower = text.lower()
-            positive_words = ['great', 'amazing', 'wonderful', 'fantastic', 'excellent', 'love', 'enjoy', 'good', 'nice', 'fabulous', 'exciting', 'happy']
-            negative_words = ['terrible', 'awful', 'horrible', 'bad', 'disappointing', 'waste', 'worst', 'hate', 'dislike', 'poor', 'boring']
-            
-            pos_count = sum(1 for word in positive_words if word in text_lower)
-            neg_count = sum(1 for word in negative_words if word in text_lower)
+            pos_count = sum(1 for word in POSITIVE_WORDS if word in text_lower)
+            neg_count = sum(1 for word in NEGATIVE_WORDS if word in text_lower)
             
             if pos_count > neg_count:
                 sentiment = "POSITIVE"
@@ -175,11 +175,8 @@ def analyze_sentiment_llm_safe(text):
         print(f"LLM analysis failed: {e}")
         # Fallback to keyword analysis
         text_lower = text.lower()
-        positive_words = ['great', 'amazing', 'wonderful', 'fantastic', 'excellent', 'love', 'enjoy', 'good', 'nice', 'fabulous', 'exciting', 'happy']
-        negative_words = ['terrible', 'awful', 'horrible', 'bad', 'disappointing', 'waste', 'worst', 'hate', 'dislike', 'poor', 'boring']
-        
-        pos_count = sum(1 for word in positive_words if word in text_lower)
-        neg_count = sum(1 for word in negative_words if word in text_lower)
+        pos_count = sum(1 for word in POSITIVE_WORDS if word in text_lower)
+        neg_count = sum(1 for word in NEGATIVE_WORDS if word in text_lower)
         
         if pos_count > neg_count:
             sentiment = "POSITIVE"
@@ -197,9 +194,7 @@ def analyze_sentiment_3class(text):
     This will return POSITIVE, NEGATIVE, or NEUTRAL.
     """
     global sentiment_3class_pipeline
-    try:
-        sentiment_3class_pipeline
-    except NameError:
+    if sentiment_3class_pipeline is None:
         # Use a simpler 3-class model that's compatible
         try:
             sentiment_3class_pipeline = pipeline("sentiment-analysis", 
@@ -231,17 +226,11 @@ def analyze_sentiment_3class(text):
             # Fallback to keyword-based 3-class analysis
             text_lower = text.lower()
             
-            # More sophisticated keyword analysis for 3-class
-            very_positive_words = ['amazing', 'fantastic', 'excellent', 'wonderful', 'love', 'fabulous', 'perfect', 'outstanding']
-            positive_words = ['great', 'good', 'enjoy', 'nice', 'exciting', 'fun', 'happy', 'enjoyed', 'like']
-            negative_words = ['terrible', 'awful', 'horrible', 'bad', 'disappointing', 'waste', 'worst', 'hate']
-            very_negative_words = ['let down', 'dislike', 'poor', 'terrible', 'awful', 'hate']
-            
-            # Count different types of sentiment words
-            very_pos_count = sum(1 for word in very_positive_words if word in text_lower)
-            pos_count = sum(1 for word in positive_words if word in text_lower)
-            neg_count = sum(1 for word in negative_words if word in text_lower)
-            very_neg_count = sum(1 for word in very_negative_words if word in text_lower)
+            # Count different types of sentiment words using global lists
+            very_pos_count = sum(1 for word in VERY_POSITIVE_WORDS if word in text_lower)
+            pos_count = sum(1 for word in POSITIVE_WORDS if word in text_lower)
+            neg_count = sum(1 for word in NEGATIVE_WORDS if word in text_lower)
+            very_neg_count = sum(1 for word in VERY_NEGATIVE_WORDS if word in text_lower)
             
             # Calculate sentiment score
             positive_score = very_pos_count * 2 + pos_count
