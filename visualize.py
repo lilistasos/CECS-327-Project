@@ -4,6 +4,21 @@ import matplotlib.pyplot as plt
 import json
 from collections import Counter
 import numpy as np
+import os
+
+# Function to save graphs to different folders
+def save_graph(filename, folder="current_run"):
+    """Save graph to specified folder"""
+    # Create folder if it doesn't exist
+    os.makedirs(f"graphs/{folder}", exist_ok=True)
+    
+    # Save to the specified folder
+    save_path = f"graphs/{folder}/{filename}"
+    plt.savefig(save_path, dpi=300, bbox_inches='tight')
+    print(f"✓ Saved {filename} to graphs/{folder}/")
+    
+    # Also save to main graphs folder for compatibility
+    plt.savefig(f"graphs/{filename}", dpi=300, bbox_inches='tight')
 
 # Load comparison results
 with open("results/sentiment_output_comparison.json") as f:
@@ -53,7 +68,7 @@ plt.title('Sentiment Distribution Comparison Across All 6 Models')
 plt.xticks(x, labels)
 plt.legend()
 plt.tight_layout()
-plt.savefig('graphs/sentiment_distribution.png', dpi=300, bbox_inches='tight')
+save_graph('sentiment_distribution.png')
 plt.show()
 
 # 2. Performance/Latency Comparison
@@ -139,7 +154,7 @@ for bar, value in zip(bars, latency):
                  'Instant', ha='center', va='bottom')
 
 plt.tight_layout()
-plt.savefig('graphs/performance_comparison.png', dpi=300, bbox_inches='tight')
+save_graph('performance_comparison.png')
 plt.show()
 
 # 3. Model Agreement Analysis
@@ -176,7 +191,7 @@ plt.pie(agreement_values, labels=agreement_labels, autopct='%1.1f%%', startangle
 plt.title('Model Agreement Analysis (6 Models)')
 plt.axis('equal')
 plt.tight_layout()
-plt.savefig('graphs/model_agreement.png', dpi=300, bbox_inches='tight')
+save_graph('model_agreement.png')
 plt.show()
 
 # 4. Detailed Comparison Table
@@ -273,7 +288,7 @@ ax.set_xticks(x + width)
 ax.set_xticklabels(models)
 ax.legend()
 plt.tight_layout()
-plt.savefig('graphs/avg_text_length_by_sentiment.png', dpi=300, bbox_inches='tight')
+save_graph('avg_text_length_by_sentiment.png')
 plt.show()
 
 # 7. Model Consistency Analysis
@@ -326,7 +341,7 @@ for bar, value in zip(bars, [model_consistencies[m] for m in models]):
              f'{value:.1f}%', ha='center', va='bottom')
 
 plt.tight_layout()
-plt.savefig('graphs/model_consistency.png', dpi=300, bbox_inches='tight')
+save_graph('model_consistency.png')
 plt.show()
 
 # 8. Memory Usage Comparison
@@ -402,7 +417,7 @@ plt.title('Memory Usage Comparison\n')
 plt.xticks(rotation=45)
 plt.grid(True, alpha=0.3, axis='y')
 plt.tight_layout()
-plt.savefig('graphs/memory_usage_comparison.png', dpi=300, bbox_inches='tight')
+save_graph('memory_usage_comparison.png')
 plt.show()
 
 print("\nAll graphs saved to 'graphs/' directory")

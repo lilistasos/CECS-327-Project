@@ -194,7 +194,7 @@
     },
     {
       "text": "We had a terrific time at Disneyland HongKong   rides were fun, waiting times ok, shows were enjoyable, very clean, staff super friendly   only let down was average food but to be expected.",
-      "sentiment": "NEUTRAL"
+      "sentiment": "NEGATIVE"
     },
     {
       "text": "Even though the rain set in for most of the day, as an adult we still had a fun time at Disneyland Hong Kong",
@@ -898,7 +898,7 @@
     },
     {
       "text": "I've gone to both Disney parks in California and Orlando and while HK Disneyland is very small in comparison, I loved how this park won't have you exhausted by the end of the day and still allow for other activities after you've finished your time. This was how I scheduled my time with my friend. 11 am met a friend at Nam Cheong MTR and rode over to the Disneyland Line. A smart thing to do would be to buy your tickets on your phone as you are riding the MTR. (We didn't and wasted some time at the ticket gate)Once we were in we took our rounds of pictures. The first impression was,  Wow, that's the castle? How awful.  Though when I was there they blocked off the castle so they will be making a more robust castle soon from what I'm understanding.In other parks like Japan and the USA, it's all about looking for the snacks all around the park. (Here's looking at you Dole Whip) I need to get this out of the way, the food is awful at HK Disney. This fact really surprised me given that there's so much good food in HK but it really was pretty horrid. Friend and I had some bad lunch and then went along to other rides. Most rides were about a 20 minute wait which I thought was very acceptable. I think the longest wait we had was for Hyperspace Mountain and that was for 40 minutes.Checked out the parade and was actually hoping for Asian women dressed up as Cinderella or Snow White. Nope. God forbid Snow White is an Asian. But I suppose I get it. lolAfter some snack fails and a Philharmagic 3D show we exited the park at around 6 pm. Took the MTR straight to Tsim Sha Tsui for a nice dinner at 7 pm. At 9 pm, friends and I were parked at a whisky bar and then by 11:30 pm I was home in bed.It was one of the most amazing days because this type of Disney excursion never happens in either California or Florida simply give the scale of the parks and also how awful public transportation is in either cities.I wouldn't recommend coming to HK for Disneyland, that would be a let down. However, if you're sightseeing in HK and have time for Disney, it's a no brainer to go.",
-      "sentiment": "NEGATIVE"
+      "sentiment": "NEUTRAL"
     },
     {
       "text": "We were in Hong Kong in September. The park is smaller than the other three that we have previously visited but has all the expected rides and features. It was pretty quiet on the gay of our visit.",
@@ -982,7 +982,7 @@
     },
     {
       "text": "Though HK Disneyland is only a fraction of the typical size, all ages find its fun here! No one will dislike Mickey, Minnie, Donald, Goofy.....First time use 2 day pass and still cannot complete all major attractions! A good reason to come again!",
-      "sentiment": "NEUTRAL"
+      "sentiment": "NEGATIVE"
     },
     {
       "text": "Always wanted to see Disneyland and when I had the chance, Christmas Eve 2018, I was disappointed. Maybe if I had been 7 and not nearly 70 I might have enjoyed it more. I expected to see a lot more characters and not be confronted by closed exhibits.",
@@ -1058,7 +1058,7 @@
     },
     {
       "text": "Visited from Australia. Enjoyed the rides, parades and shows. Disappointed the toy train ride was closed. Knew the castle would be under renovation. The biggest let down was that as we were leaving, we decided to pop by the gift shop to buy a Mickey and Mini Mouse plush toy (in the Chinese outfits) which was under the sign that said 2 for HKD298. When we went to pay, the girl behind the counter said it was HKD168 each. We took her colleague to show her the offer sign and she said it didn   t apply for Mickey and Mini, but that it was for other plush toys (Duffy and friends toys only). The girl was very condescending and made us feel unpleasant. So we accepted and bought it for HKD336. When we left to Hong Kong airport 2 days later, at the Disney store in the airport (we didn   t know there would be one there) we saw the same deal: 2 plush for HKD298 and we asked if it applied to the same Mickey and Mini mouse, and lo and behold the girl at that store said it did! that is, 2 for HKD298!! So how is it that at Disneyland park the store did not honour the offer when the other store did? We were very disappointed that the staff were very rude when we tried to enquire about the offer that was rightly given to everyone at the airport store, but did not give us this offer when it was clearly stated on the stand in the main Disneyland?!? This made what would have been a great day at Disneyland very unpleasant. We have discouraged our family & friends to visit Hong Kong Disneyland due to this unpleasant experience. Disney, we would like you to be more honest in your promotions and to honour what is stated in your pricing. ",
-      "sentiment": "POSITIVE"
+      "sentiment": "NEUTRAL"
     },
     {
       "text": "Disneyland make you think happy thoughts & just enjoy the day! We had too much fun that we almost didn't realise it was almost closing time...will definitely come back here   real soon!     ",
@@ -4002,11 +4002,11 @@
     }
   ],
   "performance": {
-    "total_time": 4.274904012680054,
-    "time_per_review": 0.0042749040126800536,
+    "total_time": 3.393554210662842,
+    "time_per_review": 0.003393554210662842,
     "reviews_processed": 1000,
-    "memory_before": 325.39453125,
-    "memory_after": 331.67578125,
-    "memory_used": 6.28125
+    "memory_before": 376.96484375,
+    "memory_after": 378.43359375,
+    "memory_used": 1.46875
   }
 }
