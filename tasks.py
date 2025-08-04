@@ -1,8 +1,5 @@
 import ray
-from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM, AutoModelForSeq2SeqLM
-from dotenv import load_dotenv
-load_dotenv()
-import os
+from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
 import torch
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
@@ -25,9 +22,9 @@ llm_model = None
 sentiment_3class_pipeline = None
 vader_analyzer = None
 
+# This function uses Hugging Face pipeline for sentiment analysis.
 @ray.remote
 def analyze_sentiment(text):
-    """Use Hugging Face pipeline for sentiment analysis"""
     global sentiment_pipeline, distilbert_tokenizer
     if sentiment_pipeline is None:
         sentiment_pipeline = pipeline("sentiment-analysis")
@@ -41,11 +38,7 @@ def analyze_sentiment(text):
 
 @ray.remote
 def analyze_sentiment_api_simple(text):
-    import requests
-    
-    # Use a simple sentiment analysis based on text analysis
-    # Since API authentication is failing, let's create a simple rule-based approach
-    # that simulates what an API might return
+    """Simulate API-based sentiment analysis using rule-based approach"""
     
     text_lower = text.lower()
     
@@ -211,7 +204,6 @@ def analyze_sentiment_3class(text):
         if sentiment_3class_pipeline is not None:
             result = sentiment_3class_pipeline(text)
             label = result[0]['label']
-            score = result[0]['score']
             
             # Map the labels to our format
             if '1' in label or '2' in label:

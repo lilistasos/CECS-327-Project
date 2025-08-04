@@ -5,7 +5,7 @@ This is my distributed systems and applications project for the summer section o
 This project implements a distributed sentiment analysis system using Ray framework to compare six different machine learning approaches (LLM, API-based, Hugging Face models, VADER, and rule-based) on 1,000 Disneyland reviews. The system provides comprehensive performance analysis including execution time, memory usage, and model agreement rates with automated visualization generation.
 
 ## Contents
-To run this program on your own machine, please refer to the setup and requirements below in this *README.md*
+To run this program on your own machine, please refer to the demo, setup, and requirements below in this *README.md*
 
 For the project report, presentation, and requirements, refer to the report folder in the repository.
 
@@ -16,6 +16,10 @@ To view the raw data refer to the data folder (DisneylandReviews.csv was used fo
 Sentiment analysis results can be viewed in the results folder in JSON format.
 
 Generated graphs can be found in the graphs folder.
+
+## Demo
+
+
 
 ## Setup
 1. Clone/download the project

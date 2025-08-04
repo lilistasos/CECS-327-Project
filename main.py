@@ -1,4 +1,4 @@
-# libraries need for this project:
+# libraries needed for this project:
 
 import ray
 from tasks import analyze_sentiment, analyze_sentiment_api_simple, analyze_sentiment_llm_safe, analyze_sentiment_3class, analyze_sentiment_manual, analyze_sentiment_vader
@@ -6,13 +6,12 @@ import pandas as pd
 import json
 import os
 import time
-import random
 import psutil
 import gc
-import shutil
 
+# Starting section of the program, where the user is asked to choose between a single run or three runs.
+# Single run is used for testing purposes, while three runs is used for averaging the results.
 def get_user_choice():
-    """Get user choice for number of runs"""
     print("\n" + "="*60)
     print("DISTRIBUTED SENTIMENT ANALYSIS SYSTEM")
     print("="*60)
@@ -33,48 +32,37 @@ def get_user_choice():
         except:
             print("Invalid input. Please try again.")
 
+# This function runs the complete sentiment analysis pipeline.
 def run_single_analysis():
-    """Run the complete sentiment analysis pipeline"""
     # Shutdown Ray if it's already running
     try:
         ray.shutdown()
     except:
         pass
     
-    # Initialize Ray
+    # Initialize Ray (used for parallel processing)
     ray.init()
 
     # Memory monitoring functions
+    # This function gets the current memory usage in MB.
     def get_memory_usage():
-        """Get current memory usage in MB"""
         process = psutil.Process(os.getpid())
         return process.memory_info().rss / 1024 / 1024
 
+    # This function prints the current memory usage in MB.
     def print_memory_status(stage=""):
-        """Print current memory usage"""
         memory_mb = get_memory_usage()
         print(f"Memory usage {stage}: {memory_mb:.1f} MB")
         return memory_mb
 
     # Read the CSV file
-    df = pd.read_csv("data/DisneylandReviews.csv", encoding="latin1").head(1000)  # Increased to 1000 for scalability testing
-    # Adjust 'Review_Text' to the actual column name for review text
+    df = pd.read_csv("data/DisneylandReviews.csv", encoding="latin1").head(1000)
     reviews = df['Review_Text'].dropna().tolist()
 
-    # Inspect the columns to find the review text column
-    print(df.columns)
+    # Print the dataset size and number of reviews to process.
     print(f"Dataset size: {len(df)} reviews")
     print(f"Reviews to process: {len(reviews)} reviews")
     print_memory_status("after loading data")
-
-    # Memory-safe version with six approaches
-    print("Available models:")
-    print("1. LLM (DialoGPT-small) - Memory Safe")
-    print("2. API-based (Twitter RoBERTa) - Memory Safe") 
-    print("3. Hugging Face 3-class (RoBERTa) - Memory Safe")
-    print("4. Manual Sentiment Analysis - Memory Safe")
-    print("5. Hugging Face (DistilBERT) - Memory Safe")
-    print("6. VADER (Valence Aware Dictionary) - Memory Safe")
 
     # Run LLM sentiment analysis
     print("\nRunning LLM sentiment analysis...")
@@ -85,7 +73,7 @@ def run_single_analysis():
     llm_time = time.time() - start
     print(f"LLM time: {llm_time:.2f} seconds")
     llm_memory_after = print_memory_status("after LLM")
-    gc.collect()  # Force garbage collection
+    gc.collect() 
 
     # Run API-based sentiment analysis
     print("\nRunning API-based sentiment analysis...")
@@ -275,21 +263,14 @@ def run_single_analysis():
 
     return True
 
-def copy_graphs_to_folder(folder_name):
-    """Copy graphs to specified folder"""
+# This function cleans the main graphs folder.
+def clean_main_graphs_folder():
     source_dir = "graphs"
-    target_dir = f"graphs/{folder_name}"
-    
-    # Create target directory if it doesn't exist
-    os.makedirs(target_dir, exist_ok=True)
-    
-    # Copy all PNG files
     for file in os.listdir(source_dir):
         if file.endswith('.png'):
-            source_path = os.path.join(source_dir, file)
-            target_path = os.path.join(target_dir, file)
-            shutil.copy2(source_path, target_path)
-            print(f"✓ Copied {file} to {folder_name}/")
+            file_path = os.path.join(source_dir, file)
+            os.remove(file_path)
+            print(f"Removed {file} from main graphs folder")
 
 # Get user choice
 choice = get_user_choice()
@@ -298,11 +279,12 @@ if choice == 1:
     # Single run
     print("\nRunning single analysis...")
     if run_single_analysis():
-        print("\n✓ Single analysis completed successfully!")
+        print("\nSingle analysis completed successfully!")
         print("Running visualization...")
         import visualize
-        copy_graphs_to_folder("current_run")
-        print("✓ Results saved to graphs/current_run/")
+        visualize.run_visualization("current_run")
+        clean_main_graphs_folder()
+        print("Results saved to graphs/current_run/")
     
 elif choice == 2:
     # Three runs
@@ -313,15 +295,16 @@ elif choice == 2:
         print(f"\n--- Run {i+1}/3 ---")
         if run_single_analysis():
             successful_runs += 1
-            print(f"✓ Run {i+1} completed successfully")
+            print(f"Run {i+1} completed successfully")
         else:
-            print(f"✗ Run {i+1} failed")
+            print(f"Run {i+1} failed")
     
     if successful_runs > 0:
-        print(f"\n✓ Completed {successful_runs} successful runs")
+        print(f"\nCompleted {successful_runs} successful runs")
         print("Running visualization...")
         import visualize
-        copy_graphs_to_folder("average_run")
-        print("✓ Results saved to graphs/average_run/")
+        visualize.run_visualization("average_run")
+        clean_main_graphs_folder()
+        print("Results saved to graphs/average_run/")
     else:
-        print("✗ No successful runs completed")
+        print("No successful runs completed")
