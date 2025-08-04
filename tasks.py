@@ -4,10 +4,8 @@ import torch
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 # Global word lists for sentiment analysis
-POSITIVE_WORDS = ['great', 'amazing', 'wonderful', 'fantastic', 'excellent', 'love', 'enjoy', 'good', 'nice', 'fabulous', 'exciting', 'fun', 'happy', 'enjoyed']
+POSITIVE_WORDS = ['great', 'amazing', 'wonderful', 'fantastic', 'excellent', 'love', 'enjoy', 'good', 'nice', 'fabulous', 'exciting', 'fun', 'happy', 'enjoyed', 'perfect']
 NEGATIVE_WORDS = ['terrible', 'awful', 'horrible', 'bad', 'disappointing', 'waste', 'let down', 'worst', 'hate', 'dislike', 'poor']
-VERY_POSITIVE_WORDS = ['amazing', 'fantastic', 'excellent', 'wonderful', 'love', 'fabulous', 'perfect']
-VERY_NEGATIVE_WORDS = ['let down', 'dislike', 'poor', 'terrible', 'awful']
 
 # Global word lists for LLM response parsing
 LLM_POSITIVE_INDICATORS = ['positive', 'good', 'great', 'excellent', 'amazing', 'wonderful']
@@ -22,6 +20,25 @@ llm_model = None
 sentiment_3class_pipeline = None
 vader_analyzer = None
 
+
+# Rule-based sentiment analysis
+def _count_words(text, word_list):
+    """Helper function to count words in text"""
+    text_lower = text.lower()
+    return sum(1 for word in word_list if word in text_lower)
+
+def _rule_based_sentiment(text):
+    """Helper function for rule-based sentiment analysis"""
+    pos_count = _count_words(text, POSITIVE_WORDS)
+    neg_count = _count_words(text, NEGATIVE_WORDS)
+    
+    if pos_count > neg_count:
+        return "POSITIVE"
+    elif neg_count > pos_count:
+        return "NEGATIVE"
+    else:
+        return "NEUTRAL"
+
 # This function uses Hugging Face pipeline for sentiment analysis.
 @ray.remote
 def analyze_sentiment(text):
@@ -30,41 +47,27 @@ def analyze_sentiment(text):
         sentiment_pipeline = pipeline("sentiment-analysis")
         distilbert_tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased-finetuned-sst-2-english")
     
-    # Truncate to 512 tokens
     tokens = distilbert_tokenizer.encode(text, truncation=True, max_length=512)
     truncated_text = distilbert_tokenizer.decode(tokens, skip_special_tokens=True)
     result = sentiment_pipeline(truncated_text)
     return {"text": truncated_text, "sentiment": result[0]["label"]}
 
+
+# API-based sentiment analysis
 @ray.remote
 def analyze_sentiment_api_simple(text):
-    """Simulate API-based sentiment analysis using rule-based approach"""
     
-    text_lower = text.lower()
+    # Use the helper function for sentiment analysis
+    sentiment = _rule_based_sentiment(text)
+
     
-    # Count different types of sentiment words using global lists
-    very_pos_count = sum(1 for word in VERY_POSITIVE_WORDS if word in text_lower)
-    pos_count = sum(1 for word in POSITIVE_WORDS if word in text_lower)
-    neg_count = sum(1 for word in NEGATIVE_WORDS if word in text_lower)
-    very_neg_count = sum(1 for word in VERY_NEGATIVE_WORDS if word in text_lower)
-    
-    # Calculate sentiment score
-    positive_score = very_pos_count * 2 + pos_count
-    negative_score = very_neg_count * 2 + neg_count
-    
-    # Determine sentiment based on scores
-    if positive_score > negative_score and positive_score > 0:
-        sentiment = "POSITIVE"
-    elif negative_score > positive_score and negative_score > 0:
-        sentiment = "NEGATIVE"
-    else:
-        sentiment = "NEUTRAL"
+
     
     return {"text": text, "sentiment": sentiment}
 
+# VADER sentiment analysis
 @ray.remote
 def analyze_sentiment_vader(text):
-    """VADER sentiment analysis - specifically designed for social media text"""
     global vader_analyzer
     if vader_analyzer is None:
         vader_analyzer = SentimentIntensityAnalyzer()
@@ -85,9 +88,9 @@ def analyze_sentiment_vader(text):
     
     return {"text": text, "sentiment": sentiment}
 
+# Manual rule-based sentiment analysis
 @ray.remote
 def analyze_sentiment_manual(text):
-    """Manual rule-based sentiment analysis using keyword matching"""
     text_lower = text.lower()
     
     # Use global word lists
@@ -103,16 +106,13 @@ def analyze_sentiment_manual(text):
     
     return {"text": text, "sentiment": sentiment}
 
+# LLM sentiment analysis
 @ray.remote
 def analyze_sentiment_llm_safe(text):
-    """
-    Use a smaller LLM through Hugging Face for sentiment analysis.
-    This uses a smaller model that won't crash the system but still demonstrates LLM capabilities.
-    """
     global llm_tokenizer, llm_model
     if llm_tokenizer is None or llm_model is None:
         # Use a smaller, memory-safe LLM
-        model_name = "microsoft/DialoGPT-small"  # Only 117M parameters
+        model_name = "microsoft/DialoGPT-small" 
         llm_tokenizer = AutoTokenizer.from_pretrained(model_name)
         llm_model = AutoModelForCausalLM.from_pretrained(model_name)
         
@@ -120,20 +120,21 @@ def analyze_sentiment_llm_safe(text):
         if llm_tokenizer.pad_token is None:
             llm_tokenizer.pad_token = llm_tokenizer.eos_token
     
-    # Create a clearer, more structured prompt for sentiment analysis
-    prompt = f"Review: {text}\nQuestion: Is this review positive, negative, or neutral?\nAnswer: This review is"
+    # Create a clear numerical prompt explaining what each number means
+    prompt = f"Review: {text}\nRate the sentiment: 1=positive, -1=negative, 0=neutral\nAnswer:"
     
     try:
         # Tokenize with truncation to prevent memory issues
         inputs = llm_tokenizer(prompt, return_tensors="pt", truncation=True, max_length=256)
         
-        # Generate with conservative parameters
+        # Generate with parameters optimized for instruction following
         with torch.no_grad():  # Disable gradient computation for inference
             outputs = llm_model.generate(
                 **inputs,
-                max_new_tokens=15,  # Allow more tokens for better response
-                temperature=0.3,    # Slightly higher temperature for more varied responses
-                do_sample=True,     # Enable sampling for better responses
+                max_new_tokens=5,  
+                temperature=0.1, 
+                do_sample=True,    
+                top_p=0.9,        
                 pad_token_id=llm_tokenizer.eos_token_id,
                 eos_token_id=llm_tokenizer.eos_token_id
             )
@@ -144,39 +145,27 @@ def analyze_sentiment_llm_safe(text):
         # Extract the generated part (after the prompt)
         generated_text = response[len(prompt):].strip().lower()
         
-        # More robust sentiment parsing using global indicators
-        if any(word in generated_text for word in LLM_POSITIVE_INDICATORS):
+        # Parse sentiment from LLM response - more flexible parsing
+        generated_text = generated_text.strip()
+        generated_text = generated_text.lower()
+        
+        # Parse numerical sentiment from LLM response
+        generated_text = generated_text.strip()
+        
+        # Look for numerical values in the response
+        if "1" in generated_text or "positive" in generated_text.lower():
             sentiment = "POSITIVE"
-        elif any(word in generated_text for word in LLM_NEGATIVE_INDICATORS):
+        elif "-1" in generated_text or "negative" in generated_text.lower():
             sentiment = "NEGATIVE"
-        elif any(word in generated_text for word in LLM_NEUTRAL_INDICATORS):
+        elif "0" in generated_text or "neutral" in generated_text.lower():
             sentiment = "NEUTRAL"
         else:
-            # Fallback: analyze the original text for sentiment clues
-            text_lower = text.lower()
-            pos_count = sum(1 for word in POSITIVE_WORDS if word in text_lower)
-            neg_count = sum(1 for word in NEGATIVE_WORDS if word in text_lower)
-            
-            if pos_count > neg_count:
-                sentiment = "POSITIVE"
-            elif neg_count > pos_count:
-                sentiment = "NEGATIVE"
-            else:
-                sentiment = "NEUTRAL"
+            # If LLM fails, use rule-based fallback
+            sentiment = _rule_based_sentiment(text)
             
     except Exception as e:
-        print(f"LLM analysis failed: {e}")
-        # Fallback to keyword analysis
-        text_lower = text.lower()
-        pos_count = sum(1 for word in POSITIVE_WORDS if word in text_lower)
-        neg_count = sum(1 for word in NEGATIVE_WORDS if word in text_lower)
-        
-        if pos_count > neg_count:
-            sentiment = "POSITIVE"
-        elif neg_count > pos_count:
-            sentiment = "NEGATIVE"
-        else:
-            sentiment = "NEUTRAL"
+        # If LLM completely fails, use rule-based approach
+        sentiment = _rule_based_sentiment(text)
     
     return {"text": text, "sentiment": sentiment}
 

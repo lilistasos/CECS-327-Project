@@ -269,15 +269,20 @@ def run_visualization(folder="current_run"):
         plt.figure(figsize=(12, 8))
         bars = plt.bar(available_models, memory_values, color=available_colors, alpha=0.8, edgecolor='black', linewidth=1)
 
+        # Calculate proper y-axis limits
+        max_value = max(memory_values) if memory_values else 0
+        y_limit = max_value * 1.2  # Add 20% padding for labels
+        
         # Add value labels on bars
         for bar, value in zip(bars, memory_values):
-            plt.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 5,
+            plt.text(bar.get_x() + bar.get_width()/2, bar.get_height() + (y_limit * 0.02),
                     f'{value:.1f} MB', ha='center', va='bottom', fontweight='bold')
 
         plt.xlabel('Sentiment Analysis Models')
         plt.ylabel('Memory Usage (MB)')
         plt.title('Memory Usage Comparison\n(Only models with real memory data shown)')
         plt.xticks(rotation=45)
+        plt.ylim(0, y_limit)  # Set proper y-axis limits
         plt.grid(True, alpha=0.3, axis='y')
         plt.tight_layout()
         save_graph('memory_usage_comparison.png', folder)

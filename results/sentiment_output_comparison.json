@@ -37,7 +37,7 @@
   },
   {
     "text": "the location is not in the city, took around 1 hour from Kowlon, my kids like disneyland so much, everything is fine.   but its really crowded and hot in Hong Kong",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -55,7 +55,7 @@
   },
   {
     "text": "Great place! Your day will go by and you won't even know it. Obviously went there for my daughter and she absolutely loved it! Too bad the parade got canceled though.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -73,7 +73,7 @@
   },
   {
     "text": "Feel so let down with this place,the Disneyland train was fantastic until you get past the station,bad signage, terrible staff who just did not want to be there ,it was rainning and rides were not working could not find a map of place, over priced fun park. Disney characters only 2 seen under a cabana having photos with visitors queuing up in the rain. Dont waste your money. Walt Disney would be horrified, not enough eating places for the amount of people or rest rooms. Seems they are building something but who knows what. No atmosphere of fun and fantasy. ",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "NEGATIVE",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEGATIVE",
@@ -109,7 +109,7 @@
   },
   {
     "text": "We spend two days, the second day went early then went straight to the back of the park, no lineups for so children got to go on many rides, some twice in a row. This Disneyland is very suitable for young children ours were 7,6,5,4,3 and 1 so most of them could go on all the rides, it was disappointing the castle was closed no nightly fireworks. Would not like to go in the hot season.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEGATIVE",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEGATIVE",
@@ -172,7 +172,7 @@
   },
   {
     "text": "There is nothing more to say except that you become a child once again as you step inside Disneyland in HK!  Easy to go and come out with dedicated trams and subway stations.  Wait for the parade at sunset it is definitely worth waiting!",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -217,7 +217,7 @@
   },
   {
     "text": "GO early if you want to do photos with the signboards and Mickey Donald Duck. Otherwise, you could spend an hour just waiting in line to get a free photo. The paid photo is also available at a price.Tomorrow land Iron Man was excellent and we did it twice.Philar Magic is really awesome.Fantasy Land is great for the rides.Adventure Land has some nice opportunities to take photos with Tarzan, a treetop house visit, a boat cruise for kids.Grizzly Gulch was one of my favourites, Roller Coaster ride was worth the 15 minute wait.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -226,7 +226,7 @@
   },
   {
     "text": "Disneylands the world over are generic apart from the language. This was no different than the others. It was a shame about all the building work and some closed eating areas.  Definitely worth a visit if you have young children.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -253,7 +253,7 @@
   },
   {
     "text": "We visited here on a Wednesday. We arrived for opening and found the queue times to be short and had done most the rides we wanted to by early afternoon. Unfortunately there were no fireworks due to the castle being renovated and we have seen many parades at Disney world so we decided not to stay for the evening. ",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -343,7 +343,7 @@
   },
   {
     "text": "You have to visit to understand the memorable experience. It is a place that brings out the child in everyone. You have to stay for the fireworks. Food is expensive so take snacks along.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -352,7 +352,7 @@
   },
   {
     "text": "HKDL got different event for different period. Like Jan Feb for Chines New Year, Apr May for Spring Carnival, then Summer, Halloween and Christmas, each event got different theme for both charaters costume and decorate, and sometimes might got the special daily parade too. Thats why recommend to check clearly which event you want to join before you make the disney trip. If you don't like crowded, Mar & November without any event happening will be your choice!",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -370,7 +370,7 @@
   },
   {
     "text": "Visited here with the family and had a very memorable experience. It didn   t seem as big as Anaheim, but very clean and well maintained.  Received priority queuing passes but didn   t need them as the lines were very short.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -433,8 +433,8 @@
   },
   {
     "text": "We had a terrific time at Disneyland HongKong   rides were fun, waiting times ok, shows were enjoyable, very clean, staff super friendly   only let down was average food but to be expected.",
-    "sentiment_LLM": "POSITIVE",
-    "sentiment_API": "NEGATIVE",
+    "sentiment_LLM": "NEGATIVE",
+    "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
     "sentiment_HuggingFace": "POSITIVE",
@@ -442,7 +442,7 @@
   },
   {
     "text": "Even though the rain set in for most of the day, as an adult we still had a fun time at Disneyland Hong Kong",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -451,7 +451,7 @@
   },
   {
     "text": "Good to see while here, but very small. Great if we brought the children, but not for adults who have been to other ones. Not exciting for bigger children either.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "POSITIVE",
@@ -487,7 +487,7 @@
   },
   {
     "text": "Awesome attractions that blew my mind away. The attraction is filled with amazing rides and entertainment. There are also halal food that definitely cater to my needs. Glad to be able to meet Mickey and friends.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -505,7 +505,7 @@
   },
   {
     "text": "Love this place very clean and safe have it own MRT to get here !!! Night time is beautiful too many things to do",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -532,7 +532,7 @@
   },
   {
     "text": "It was ok. This Disney is more catered for smaller children rather than adults. Some of the areas were closed. There was only one really thrilling ride. the rest are for children. Maybe needs a few more western restaurants as well.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -559,7 +559,7 @@
   },
   {
     "text": "A very small Disney and the castle was being worked on but overall had an amazing time. Was able to ride all the rides we wanted to ride. Very nice staff, lovely experience.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -622,7 +622,7 @@
   },
   {
     "text": "Took some family to park for their first time at a Disney park. They loved it and it was a joy to see the kid in their eyes as they enjoyed all that it had to offer. Weather was great as well.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -640,7 +640,7 @@
   },
   {
     "text": "During a recent stop over in Hong Kong we paid a return trip to Disney. We chose a day when the park was quiet so our longest wait was 30 minutes I am sure this is not the case at other times.Unfortunately some of the rides were being tested or being upgraded. To prevent disappointment check out closures before you go.We didn   t eat in the park as previous experience of it   s restaurant were disappointing and very expensive.This was our third visit to the park, whenever we visit Hong Kong a visit to Disney is a must.",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "NEGATIVE",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEGATIVE",
@@ -649,8 +649,8 @@
   },
   {
     "text": "We had an impromptu trip to Disneyland on a weekday. I love the trip because there is no wait time or at least 15minutes wait time for the rides. Limited restaurants though because maybe it   s a weekday? The bad part though is that the castle is under renovation and there are on going construction in the park. ",
-    "sentiment_LLM": "POSITIVE",
-    "sentiment_API": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
+    "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
     "sentiment_HuggingFace": "NEGATIVE",
@@ -757,7 +757,7 @@
   },
   {
     "text": "Definitely a fun place to visit whilst in Honkers. We had loads of fun there and would recommend a visit",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -784,7 +784,7 @@
   },
   {
     "text": "We've been here quite a few times and one of the better Disney's as queues are short and small enough to see everything in a day.We went mid week so was lot quieter and bought our tickets through Klook which was easy, but many of the rides attractions were under refurbishment and around 50% of the restaurants were closed (presumably due to less people). Price stays the same though! So you may want to double check in advance if you really want to experience any that might be closed to avoid disappointment.",
-    "sentiment_LLM": "NEUTRAL",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -793,7 +793,7 @@
   },
   {
     "text": "Bucket list unlock.      One of the best trip we ever haven. Enjoy every single second inside Disneyland must to try every rides of it.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -847,7 +847,7 @@
   },
   {
     "text": "Didn   t feel the Disney spirit in this place. There were few Disney characters around, but one must wait in long lineup to shake hand with them. We stayed for only couple hours and left.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -910,7 +910,7 @@
   },
   {
     "text": "The main attractions were shut while we still paid the full entrance fees, without any intimation either online or as the ticket kiosks",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -964,7 +964,7 @@
   },
   {
     "text": "Spent 2 days in Disneyland with my young children. Our 2nd time actually to the park. A must visit to everybody if ever you have the opportunity !",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -1036,7 +1036,7 @@
   },
   {
     "text": "We liked this compared with United States because its easier to navigate because its smaller and there are more rides for little ones. We went on Wed. and the line was short. Only from 5 minutes to 15 minutes wait. Unheard of in the USA. You can get here easily with MTR. Expect to spend a day here. They open at 10 am. The Moana show and the Disney Tale Story Show was our favorite.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -1054,7 +1054,7 @@
   },
   {
     "text": "We had a fun day here, it was quite busy and wait times were roughly 20   30 minutes per ride. Plenty of eating places and souvenir shops available. There were a couple of good rollercoaster rides, but nothing like Disneyland in USA. I would still recommend it for a good day out.",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -1081,7 +1081,7 @@
   },
   {
     "text": "Having been to Florida, Anaheim and Euro Disney, Hong Kong Disney is definately the smallest, however given 5 hours to a day of spare time we think it is worth a visit. Limited number of rides but still fully professionally set up in true Disney style. The shows equally up to Disney standard. ",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -1126,7 +1126,7 @@
   },
   {
     "text": "I really loved Disneyland! The two must rides are the Mystic Manor and the Grizzly Gulch Runaway Mine Trains. Both are excellent. Highly recommend going on a weekday. We did not have a wait longer than 20 minutes any where on a Monday and Tuesday. You don't need the Priority Special or Priority Special   on weekdays.",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -1216,7 +1216,7 @@
   },
   {
     "text": "Relatively small compared to Disney World.  Well maintained, clean,  Admission fee the lowest  is $61  US dollars.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -1234,7 +1234,7 @@
   },
   {
     "text": "Came here once with my parents some years ago. Came here again for another visit. The rides are okay but as usual, super crowded and busy, especially the lunch hours where the queue can be as long as 45 mins to an hour. Food is so so, especially for the Starliner restaurant that serves western food. Ticket came with a food coupon for purchase of meal up to $149HK. Bought the recommended value set to maximise it but the burger was so pathetic, small, flat and the meat was half. ",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -1279,7 +1279,7 @@
   },
   {
     "text": "It was incredible. We actually rode every attraction in the park, sometimes twice. Our longest wait   15 mins! We didn   t even use the Fast Pass or a Priority Pass. Compared to Disneyland in Anaheim, CA USA   If we had the opportunity; we would rather visit Hong Kong Disneyland. To save money, purchase your tickets and meals via the Klook app. (I do not have any relationship to Klook). Have Fun!",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -1306,7 +1306,7 @@
   },
   {
     "text": "Not a trip to HK without swinging by Disneyland. A day will never be enough to check out all the attractions. The place is huge and  seems to always have something every time we visit.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -1381,13 +1381,13 @@
     "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
-    "sentiment_Manual": "NEUTRAL",
+    "sentiment_Manual": "POSITIVE",
     "sentiment_HuggingFace": "POSITIVE",
     "sentiment_VADER": "POSITIVE"
   },
   {
     "text": "Magical, fun time at Disneyland. We had 2 wonderful days here. All staff make the visit extra special as they are so kind and patient.  Unfortunately we were disappointed to find the fireworks were cancelled both nights we were there. No warning or explanation.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -1441,7 +1441,7 @@
   },
   {
     "text": "The magic starts with the MTR, Mickey shapped windows and handle bars, then a five minute walk into the park with fountains and posters feels like you are already inside. Characters walking around everwhere, fun rides and friendly helpful staff. The parades are amazing . Oh and my kids had a good time too ... second time in 5 years and looking forward to visiting again soon.",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -1459,7 +1459,7 @@
   },
   {
     "text": "Smaller than the original but still just as much fun.  Fair way to travel but can be reached by train from HK Central.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -1486,7 +1486,7 @@
   },
   {
     "text": "Easy to get there, only need to take the subway, inside the subway there is also disney decoration so can take pictures while heading there. Very convenience and clean. Inside the disney park, there are lots of cute sounveir shops, area is clean, people are friendly. Lots of disney characters to take pic with, not that long line up, it depends on the time and month you go. Although its not a big disney but you can still spend a whole day there. If you like cute stuff, hongkong disney is a must go. You will buy lots there.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -1666,7 +1666,7 @@
   },
   {
     "text": "Magical as expected. Fairy tale! Some great themed rides, highlight for us was the Iron Man. Go for the slightly more expensive ticket that gets you priority pass, otherwise you will need to queue quite a bit.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -1684,7 +1684,7 @@
   },
   {
     "text": "Very crowded most of the time and long queue for rides. Food limited choice and quite pricey.  Kids can collect stickers given out by staffs all over the place. Just need to approach the staffs for free stickers",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -1738,7 +1738,7 @@
   },
   {
     "text": "So much of the park is closed!! Very disappointing   only a few rides In the park. I do know there is an expansion planned, but so much was closed now, I don't know how they can afford to expand! I knew it was a small park before we went, but it is lacking the 'Disney' in every aspect... other than the cost! It is really easy to get to on the MTR and good for about 3hrs of entertainment If you are looking for something different to do while visiting HK.",
-    "sentiment_LLM": "NEUTRAL",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -1757,7 +1757,7 @@
   {
     "text": "this was a very interesting park because although it was very crowded, the line ups were never too bad... we went in with a plan because we only had one day... but we did enjoy ourselves. i suggest going shopping early in the day because the people there were savages! the store workers couldnt even keep up with people throwing things on the floor and all over the shelves... what a mess!! it was a terrible store experience and i waited 45 mins just to pay! the park was fun   the space mountian was fantastic but the shopping was awful so just know that going in   only need one day for this park",
     "sentiment_LLM": "NEUTRAL",
-    "sentiment_API": "NEGATIVE",
+    "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEUTRAL",
     "sentiment_HuggingFace": "NEGATIVE",
@@ -1774,7 +1774,7 @@
   },
   {
     "text": "Fantastic experience. Enjoyed every step of our stay in this wonderful theme park. Thank you DisneyLand, Hongkong.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -1819,7 +1819,7 @@
   },
   {
     "text": "Each visit is just as magical as the last. My son always enjoys meeting the characters and the food that's shaped like Mickey. Would only recommend that they have other food options other than the exiting ones as variety for those that visit frequently",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -1846,7 +1846,7 @@
   },
   {
     "text": "It is definitely the happiest place on earth. Start off your day with a photo op with the balloons. Then make sure to have a photo pass you could get great photos taken by pros. You can opt to have your daughter be a princess for a day. If you are staying at the hotel it is just near the restaurant. Make sure to catch both the day and night parades.",
-    "sentiment_LLM": "NEUTRAL",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -1855,7 +1855,7 @@
   },
   {
     "text": "Great place to visit if you are any age! Really clean and the workers do not allow line jumpers (which is good). It is a smaller park but this makes it easier to navigate and you don't have to keep going back to see thing you missed out on.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -1909,7 +1909,7 @@
   },
   {
     "text": "Everything are fun fun fun! But the food quality ahould be checked since uts really pricy and everyone are willing to pay",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "POSITIVE",
@@ -1936,7 +1936,7 @@
   },
   {
     "text": "Back to your childhood life, this theme park are full of imagination. It   s very attractive. Spend the the whole day, from morning to the evening. You   ll never get boring here because it shows a lot of attractions. Don   t forget to see the fireworks as a closing ceremony. ",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -1945,7 +1945,7 @@
   },
   {
     "text": "Very small Disneyland compared to the other countries. Beautiful Disney themed train to reach the park. Big disappointment due to the Disney castle closed down and no fireworks, friendly staff and very helpful",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -1981,7 +1981,7 @@
   },
   {
     "text": "Although this is the smallest Disneyland in the world, it doesn   t discount on the value. It definitely worth a visit!",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -2026,7 +2026,7 @@
   },
   {
     "text": "We were in Hong Kong in September. The park is smaller than the other three that we have previously visited but has all the expected rides and features. It was pretty quiet on the gay of our visit.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -2089,7 +2089,7 @@
   },
   {
     "text": "My daughter experienced being a princess for one whole day and this is a memory of a lifetime.  It is always a treat to visit Disneyland.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -2125,15 +2125,6 @@
   },
   {
     "text": "Every year I come to Disney with my children, every year is worse than the last one!!!!Prices for entrance tickets are outrageous, specially taking in account that the rides are minimal...Food prices are not normal, even for Disney, super hyper expensive, horrible food, even the junk food is tasteless!!!Only good thing about this place is leaving it!!!!",
-    "sentiment_LLM": "POSITIVE",
-    "sentiment_API": "NEUTRAL",
-    "sentiment_3Class": "NEGATIVE",
-    "sentiment_Manual": "NEUTRAL",
-    "sentiment_HuggingFace": "NEGATIVE",
-    "sentiment_VADER": "NEGATIVE"
-  },
-  {
-    "text": "If you going for the Disneyland adventure this is not the place. The price to enter is ridiculously high and don   t bother with the skip line thing coz it   s just not worth it, if you get there early enough you will get to go on all the rides before lunch and then you have been on them all. The famous Disney castle was undergoing a renovation that was not indicated on their website or at the gate. From the drinks to food and all those stupid little shops everything is way overpriced. The photo below was taken at 11:00. ",
     "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEGATIVE",
@@ -2142,8 +2133,17 @@
     "sentiment_VADER": "NEGATIVE"
   },
   {
+    "text": "If you going for the Disneyland adventure this is not the place. The price to enter is ridiculously high and don   t bother with the skip line thing coz it   s just not worth it, if you get there early enough you will get to go on all the rides before lunch and then you have been on them all. The famous Disney castle was undergoing a renovation that was not indicated on their website or at the gate. From the drinks to food and all those stupid little shops everything is way overpriced. The photo below was taken at 11:00. ",
+    "sentiment_LLM": "POSITIVE",
+    "sentiment_API": "NEUTRAL",
+    "sentiment_3Class": "NEGATIVE",
+    "sentiment_Manual": "NEUTRAL",
+    "sentiment_HuggingFace": "NEGATIVE",
+    "sentiment_VADER": "NEGATIVE"
+  },
+  {
     "text": "Visited with my 2 kids and Wife , we had so much Fun .we will be back for Sure.  Disneyland in Hong kong have so many activities to offer , we had great time with my family . I LOVE HONG KONG",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -2152,7 +2152,7 @@
   },
   {
     "text": "Hong Kong Disneyland is the smallest of the Disney parks and not as crowded as Japan. They have the new Ironman ride attraction but some of the old ones have been closed and being replaced.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -2170,7 +2170,7 @@
   },
   {
     "text": "Small park so u can finish in one day or maybe less.. Still interesting everytime i visit, its Disneyland in the end..",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -2197,7 +2197,7 @@
   },
   {
     "text": "I bought ticket from KLOOK and easily access to disneyland entrance. Just print out document and present to staff at the entrance.Some bad things are about the present of each cartoon, I waited to take picture with Donald Duck and Daisy but they showed up only short time. Waste my time a lot. Woody at Toy Story showed himself only in the morning. I almost cried when staff told me that Woody will show again during parade time in the evening!Long queue to wait for each machine, wait around 40 minutes to 1 hour and can play only 5 minutes!!!!!Food in Disneyland is not really good, but no choice to eat.",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "NEGATIVE",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEGATIVE",
@@ -2207,7 +2207,7 @@
   {
     "text": "Though HK Disneyland is only a fraction of the typical size, all ages find its fun here! No one will dislike Mickey, Minnie, Donald, Goofy.....First time use 2 day pass and still cannot complete all major attractions! A good reason to come again!",
     "sentiment_LLM": "POSITIVE",
-    "sentiment_API": "NEGATIVE",
+    "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
     "sentiment_HuggingFace": "POSITIVE",
@@ -2251,7 +2251,7 @@
   },
   {
     "text": " Too experience to visit ,for over $600 Hk , every things so crazy , waiting time for any ride well over one hours ! washroom is closed to one and half hours wait ,poor ladies 1,the foods is so pricey ever Micky would not buy it ,people ,people ,people ! it is a small kingdom with no local want to come ,no wonder they lost money every year ,better off save time and moneys do some things else ,you will thank me for it !",
-    "sentiment_LLM": "NEUTRAL",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEGATIVE",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEGATIVE",
@@ -2269,7 +2269,7 @@
   },
   {
     "text": "A tad disappointing after Paris Disney as it is small and has only a few fun rides. Most disappointing was the lack of variety in the retail therapy!!!! Sorry Disney but I   d go to Ocean Park next time.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -2287,7 +2287,7 @@
   },
   {
     "text": "Overall a small park compared to the other Disneyland. Definitely only need a day there. When we went in late April it was very hot and we ended up buying a umbrella which was brilliant for the day. Sadly the castle wasn't open when we were there and surrounded by wire fencing which made photos hard. Overall a splendid day and lines were not an issue at all the max we had to wait was 20 mins",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -2305,7 +2305,7 @@
   },
   {
     "text": "Easy to get to via taxi (approx $130HKD from the airport). Lion King and mickey's storybook were the best shows in the park.fantastic parades and even adults feel included in the disney atmosphere! Food & drink is a little pricey.",
-    "sentiment_LLM": "NEUTRAL",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -2378,7 +2378,7 @@
   {
     "text": "Visited from Australia. Enjoyed the rides, parades and shows. Disappointed the toy train ride was closed. Knew the castle would be under renovation. The biggest let down was that as we were leaving, we decided to pop by the gift shop to buy a Mickey and Mini Mouse plush toy (in the Chinese outfits) which was under the sign that said 2 for HKD298. When we went to pay, the girl behind the counter said it was HKD168 each. We took her colleague to show her the offer sign and she said it didn   t apply for Mickey and Mini, but that it was for other plush toys (Duffy and friends toys only). The girl was very condescending and made us feel unpleasant. So we accepted and bought it for HKD336. When we left to Hong Kong airport 2 days later, at the Disney store in the airport (we didn   t know there would be one there) we saw the same deal: 2 plush for HKD298 and we asked if it applied to the same Mickey and Mini mouse, and lo and behold the girl at that store said it did! that is, 2 for HKD298!! So how is it that at Disneyland park the store did not honour the offer when the other store did? We were very disappointed that the staff were very rude when we tried to enquire about the offer that was rightly given to everyone at the airport store, but did not give us this offer when it was clearly stated on the stand in the main Disneyland?!? This made what would have been a great day at Disneyland very unpleasant. We have discouraged our family & friends to visit Hong Kong Disneyland due to this unpleasant experience. Disney, we would like you to be more honest in your promotions and to honour what is stated in your pricing. ",
     "sentiment_LLM": "POSITIVE",
-    "sentiment_API": "NEUTRAL",
+    "sentiment_API": "POSITIVE",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "POSITIVE",
     "sentiment_HuggingFace": "NEGATIVE",
@@ -2404,7 +2404,7 @@
   },
   {
     "text": "I was here 3 years ago and the park has a slight change. This time there is no firework at night but only parade of the disney characters. If you are looking for halal food the place is at adventure land. They serve asian food and quite resonable price. As for the ride, please go for the iron man ride and it is 3D and also go for the star war Jedi training and you fight with darth vader. For starwar fan, you must not miss this. Every ride waiting time is about 20 minutes Overall the park is well organise.",
-    "sentiment_LLM": "NEUTRAL",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -2494,7 +2494,7 @@
   },
   {
     "text": "We feel at Disneyland, like in the USA or Paris...  not that many people in winter  Fast pass are free : don't wait in line !  a great day, as usual !",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -2503,7 +2503,7 @@
   },
   {
     "text": "There were only about two rides in each of the lands areas and several of those rides were closed. The park is small and so each of the rides are compacted into small spaces. The rides were short. The best show was the Lion King, Moana was disappointing. The lines were only 15 30 minutes waiting time. It's about $80 to get in. They have cooked squid they sell at kiosks and it tastes like beef jerky. You can take the subway to get to Disneyland",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEGATIVE",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEGATIVE",
@@ -2521,7 +2521,7 @@
   },
   {
     "text": "If you haven   t been at other Disney, you will have abre at time specially if visiting with children. If you   ve visited Disneyland in California or Disney World in Florida you   ll be disappointed here. It is like all Disney   s very pretty but way too far, complicated to get there, expensive and small! Very few attractions and with only the oldest classics of the park like Jungle River Cruise, Dumbo, It   s a Small World, etc. ",
-    "sentiment_LLM": "NEUTRAL",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -2530,7 +2530,7 @@
   },
   {
     "text": "As a local, I have annual pass and bring the kids visit almost once a month. Despite the park is not big, and it is enough for a full day travel, and the extension may take a few years later, which perhaps a second day visit as well. My understanding there are some package tour to stay the Disneyland resort hotel and have compliment tickets to visit the theme park as well.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -2575,7 +2575,7 @@
   },
   {
     "text": "Why would you spend all that money going to America when you could go to Hong Kong Disneyland?? We had a carefree trip there on the train arriving late morning. We saw the Lion King show, went on rides, watched the  Halloween Parade , ate, drank and had a ball and didn't leave until after nightfall. Highly recommended..",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -2602,7 +2602,7 @@
   },
   {
     "text": "Was at the park for 2 days in Jan on both weekdays. Park was not that crowded and most rides had waiting time of less than 30 mins or so. Weather was great as well. However there was no fireworks at the end of the parade on a weekday which was disappointing.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -2620,7 +2620,7 @@
   },
   {
     "text": "Had the most amazing 4days at disneyland. They made my son who has special need and in a wheelchair feel like a Prince. Made everything easy and super friendly",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -2683,7 +2683,7 @@
   },
   {
     "text": "It was nice time to go there and see the parade. But the queue to take picture with Mickey and Minie was tooooo long.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "POSITIVE",
@@ -2755,7 +2755,7 @@
   },
   {
     "text": "I assume its smaller than the one in Tokyo. Tried a few rides, not too extreme. The rain causing the parade to be cancelled, dissapointed but it was okay. Last minute to ride before the park closed. Can be expensive, but it was okay..",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -2773,7 +2773,7 @@
   },
   {
     "text": "Our experience in Disneyland was unforgettable. From we start until end we are happy all do the weather was bad we are very enjoy.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -2818,7 +2818,7 @@
   },
   {
     "text": "The main destination we visited hongkong. Dont forget to purchase tickets in by online before coming to void a long queue at the counter. Most of track are suitable for young children and their souvenier shop has pleanty offers. The night attraction also entertain us so much",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -2845,7 +2845,7 @@
   },
   {
     "text": "It was a bit of a disappointment when you have to queue up for nearly 30 45 minutes for a rides. Even you want to get fast pass for the rides, they can tell you no pass is available. Park is not big and you can walk around everywhere. With young kids you can rent their wagon for 120hkd per day. Entrance fees is comparatively high as compared to other countries. But still worth to come as the kids love it!!",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "POSITIVE",
@@ -2854,7 +2854,7 @@
   },
   {
     "text": "Our 6th visit to HK Disneyland. Everything is in close proximity and queues weren   t too bad   30 minutes tops. Not bad for New Year   s Day. Still a shame there are no fireworks, but knowing that beforehand we booked dinner when we would normally watch the fireworks display. ",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEGATIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEGATIVE",
@@ -2917,7 +2917,7 @@
   },
   {
     "text": "Average waiting time for the more popular rides is 30min. Back to the future is replaced by Ironman, I guess. Buzz Lightyear is also being removed. Hyperspace mountain is too bright and windy to open eyes and it's a crazy non stop high speed roller coaster ride. I prefer Grizzly Gulch roller coaster. The speed varies, including a backward ride. There's a cycle of high speed ride too but it's more bearable than Hyperspace mountain.Food is very expensive in the park, as expected. Average HKD120 for a meal.",
-    "sentiment_LLM": "NEUTRAL",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -2962,7 +2962,7 @@
   },
   {
     "text": "My 2nd time visiting HKG Disneyland...My children and ourselves enjoyed every moment when we were there...A place worth visiting...",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -3025,7 +3025,7 @@
   },
   {
     "text": "I have been going to HK disneyland several times. Not much change. The parade is still the same and the attraction as well. New attraction is coming but unfortunately replacing my daughter favorite attraction. Some part near the castle is closed for renovation, make it not pleasant to take a picture. For those whom has not visited the park, it will be nice to experience it but after several times it will be boring.",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "POSITIVE",
@@ -3034,7 +3034,7 @@
   },
   {
     "text": "This place is overrated. Entrance fees are expensive, the queues for rides are very long, the crowd is horrible. Tokyo Disneyland is much better. Btw, Ocean Park is way better!",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEGATIVE",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEGATIVE",
@@ -3043,7 +3043,7 @@
   },
   {
     "text": "I love disney character since I was a kid, and I brought my daughter here and she loves every part of it. I love the parades, every different seasons too. It always makes me goosebump and love the music. I didn't make any much photos with the character but my daughter did. Worth to pay for the ticket for a year pass. This place is a happiest place on earth for me!",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -3061,7 +3061,7 @@
   },
   {
     "text": "Way better than the one in Shanghai, and better than Disneyland in Paris. Not very big but the lines are very long in most of the seasons , like anywhere else in Hong Kong you need to wait in a long queue to get in the ride. ",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -3169,7 +3169,7 @@
   },
   {
     "text": "I've been to Tokyo Disneyland and Anaheim Disneyland, Hong Kong Disneyland is smaller but certainly if you're already in Hong Kong don't miss it. The Ironman Experience, the Hyper Space Mountain and the Big Grizzly Mountain Runaway Cars are the best attractions.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -3187,7 +3187,7 @@
   },
   {
     "text": "Disneyland is every child dream place but it is always super crowded. This disneyland on the other hand ain't that crowded! YAY! We went early in the morning. The morning crowd is manageable. We manage to get to go twice on some rides. Did not wait more than 30mins at any rides. Easy to walk around. Christmas lightings were up. We saw the parade and it was fun. Snacks stores everywhere. Many shows to watch. Very well organised place. Go on weekdays and it will be great! I went on Friday and it is not that crowded.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -3196,7 +3196,7 @@
   },
   {
     "text": "Disney land is great for fun and stuff but 3 years ago, there were rides like the Buzz Lightyear based shooting and Utopia. They were quite popular rides but Disney has taken them away and replaced them with rides like Iron Man Experience. Of course, these rides are quite good but what about the old ones? They were good too. Also, the castle is currently under construction and the food is quite expensive",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "POSITIVE",
@@ -3250,7 +3250,7 @@
   },
   {
     "text": "What to say. Everything is magical...!!!  We visited during XMas and lit brilliantly.   Everything is expensive inside.   But once in a lifetime experience...",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -3268,7 +3268,7 @@
   },
   {
     "text": "I would like to show my appreciation towards the staff at Toys Story   Parachute for their calm and professional assistance towards us when my daughter injured herself on the head when queuing on 23rd Dec. Although our visit was cut short, the staff leave a good impression for us. Thanks again.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -3277,7 +3277,7 @@
   },
   {
     "text": "I recommend exploring the adventure zone at first then others because the queue was extremely long. Average waiting time was about 40 70 min.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -3304,7 +3304,7 @@
   },
   {
     "text": "I was with my 2 little kids while visiting Disney Land during raining day unfortunately , we were upset that the Train of Disney railroad in Fantasyland to mainstreet was close on time at 6pm even RAINING !! it should be operating to send as many visitors as it could back to the main street in order to get home or get back to the main place for dinner. In fact, many people were wet without the alternate option but to walk all the way to Main Street even some without rain suit and umbrella ...",
-    "sentiment_LLM": "NEUTRAL",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -3379,13 +3379,13 @@
     "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
-    "sentiment_Manual": "NEUTRAL",
+    "sentiment_Manual": "POSITIVE",
     "sentiment_HuggingFace": "POSITIVE",
     "sentiment_VADER": "POSITIVE"
   },
   {
     "text": "Being Hong Kong I thought it was going to be soo much better than what it is. Only about 3 'big' rides in the whole park & I wouldn't consider them big in comparison to places like Thorpe Park or Alton Towers.Happy to say that I have been there, but wouldn't recommend a thrill seeker to go there.",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "POSITIVE",
@@ -3421,7 +3421,7 @@
   },
   {
     "text": "If you have never been to a Disneyland before, seize your chance: this is the most memorable experience you can have in HK.",
-    "sentiment_LLM": "NEUTRAL",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -3448,7 +3448,7 @@
   },
   {
     "text": "So I have now been to 4 Disneyland parks, Anaheim, Orlando, Paris and Hong Kong. Anaheim will always be my favorite, but I really enjoyed this, especially the things that aren't at other parks such as Mystic Manor, Big Grizzly Mountain and Mickey and the Wondrous book.We were there from rope drop to close (11 hours) and did most things as there were no queues early on and only small wait times later.",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -3583,7 +3583,7 @@
   },
   {
     "text": "Lot of constructions on the way, tones of visitors inside the souvenir shop without crowd control. Almost 30 mins line up on cashier check out.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -3592,7 +3592,7 @@
   },
   {
     "text": "Hong Kong  Disneyland is the smallest of all Disneylands.  Suitable for  young children .   We travelled with teenagers, as such  did not offer the  excitement of other Theme Parks.The Park is very clean  and well maintained.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -3646,7 +3646,7 @@
   },
   {
     "text": "If you are a disney fan..so this is the place that you should go. Interesting 4D rides, entertaining live shows ( lion king ), met up disney characters, beautiful disney props ( castle ) & exciting souvenir shops. Few might think disneyland for younger kids ( definitely agree ). Adults who like mickey, minnie & donald duck can enjoy this place too. ",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -3664,7 +3664,7 @@
   },
   {
     "text": "A pain. Over expensive. Over cheesy, touristic rip off in one centre. Felt like my entire life   s savings were being squeezed out of me. Ok for the kids but even they got bored of stuff too quickly. Needs rethinking",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -3673,7 +3673,7 @@
   },
   {
     "text": "Just like the other Disneylands but here in Hong Kong is quite small. We were there on Monday but still quite crowded.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -3691,7 +3691,7 @@
   },
   {
     "text": "Great day out for family, avoid weekends and July August. Nice new attractions and seasonal themes. bring your empty bottle with you, food and drink are very expensive.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -3718,7 +3718,7 @@
   },
   {
     "text": "This is our first visit to Hong Kong Disneyland. Our impressions are biased towards Tokyo Disneyland as we have been there prior to HK Disneyland. Apart from the rather small Sleeping Beauty Castle being under renovation, what stood out were how small the park was and expensive food. As it was not yet peak visitation and helped by slightly rainy weather (which also ruined some outdoor shows and parades), we managed to cover all the rides and shows we wanted in a day. Of all the attractions, we liked The Festival of the Lion King, Mickey and the Wonderous Book, Iron Man Experience and Mickey   s Philharmagic.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -3736,7 +3736,7 @@
   },
   {
     "text": "God I love this place.  Not as big as the Paris one but just as much fun.  The entertainment is spot on and very well organised.  Buy a fast pass though.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -3763,7 +3763,7 @@
   },
   {
     "text": "No matter which Disneyland you go, it's still the happiest place on Earth.  All visitors have a smile on their faces   both young and old.  Very conveniently located.  Seems like all roads lead to Disney",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -3826,7 +3826,7 @@
   },
   {
     "text": "Disneyland is Disneyland and if you have been to one I wouldn   t recommend going to visit! With kids yes but it is overpriced and a little boring to be honest",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -3844,7 +3844,7 @@
   },
   {
     "text": "Great place for all ages to go. Went here on a week day which was good and the place weren't that busy thank god making it a lot easier to get on rides in no time. There was a lot of old people which was different showing no matter how old you get you can still enjoy Disney. Stayed here all day to watch parade so was worth it. Value for money Highly recommend. Booked a two way transfer save the hassle of train espically when travelling with little kids.",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -3862,7 +3862,7 @@
   },
   {
     "text": "I already had my Disneyland experience in Anaheim, California USA and wanted my 7 year old grandson to enjoy the experience. We expected a big crowd, being a Saturday, and true enough, we had to fall in line for rides. We opted for less crowded attractions.In the bumper car area, the grandkid passed the height test but without notice that he had to be at least 8 years old, he was not allowed in. There were few staff members positioned to assist, and we had to get information from vendors manning their kiosks.What made our Disney experience worth it was the amazing parade. Sadly, there were no fireworks for is that night.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "POSITIVE",
@@ -3871,7 +3871,7 @@
   },
   {
     "text": "Rides were family friendly and disability friendly, with a mix of intense and relaxed rides, exhibitions and shows. As expected, the facade of the theme park was intricate and well maintained. Food items were also cleverly designed and incorporated Disney symbols into their design. I would highly recommend families to buy a meal combo ticket (lunch dinner 2 drinks snack) to get the most bang for your buck.Please view the following photos to experience the beauty of this Theme Park.",
-    "sentiment_LLM": "NEUTRAL",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -3925,7 +3925,7 @@
   },
   {
     "text": "What a nice place to visit. Loved it, never been to any other Disney land, so this was quite the experience.  Restaurants, stalls, games, rides, shops.  Loved it.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -3961,7 +3961,7 @@
   },
   {
     "text": "Hit all the rides in under 2 hrs. Love this place! I went mid day in October,and there were no crowds.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -4042,7 +4042,7 @@
   },
   {
     "text": "Love the Princess , Love the show and good place for entertainment. My kids love it.. They enjoy all the ride and love taking pictures.. There fireworks and weather is cooling.",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -4051,7 +4051,7 @@
   },
   {
     "text": "Cold weather around our visit January 2018. A bit raining also. Not a best time to go at this month. But we still go because the show must go on. Its a dream come true for the kids. But it will the best if your kids around 8years old and up for their have some height limit on the rides.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -4087,7 +4087,7 @@
   },
   {
     "text": "It was awesome! We went on a Monday and got to see every show and ride every ride that we wanted. Wait times were minimal and crowds were sparse. I would say that my one poor experience came from the cast member responsible for maintaining the line for the Pluto meet and greet. He was quite rude and yelled at children repeatedly, then yelled at parents. A child and parent who got out of line were allowed to rejoin the line ahead of me and my son. This was also frustrating as we had been waiting for quite some time to see Pluto. I didn't find it overly expensive, it's Disney!",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEGATIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEGATIVE",
@@ -4114,7 +4114,7 @@
   },
   {
     "text": "Crowded but worth it.  I loved the light show at night, Christmas music was played and snowflakes flew in the air. At that instant, I felt the joy of Christmas.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -4159,7 +4159,7 @@
   },
   {
     "text": "This is one of the smallest parks we have been to. Currently we have been to all of the Disney parks except Paris, hopefully next year. Allow yourself about a half day to see everything. There are about 3 rides worth the time to wait in line, Hyperspace mountain, Mystic Manor, and Grizzly rollercoaster. ",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -4177,7 +4177,7 @@
   },
   {
     "text": "To be honest, we were expecting this to be the worst Disney park we   ve been to because it   s so small, but it was brilliant. It is small, but that   s part of the charm. It has all the classics you expect but with none of the stress and hassle you get in other parks.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEGATIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEGATIVE",
@@ -4231,7 +4231,7 @@
   },
   {
     "text": "Being from FL we had to check it out, sadly I think we were better off spending a second day at Ocean Park.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -4267,7 +4267,7 @@
   },
   {
     "text": "Great park. We easily rode did everything we wanted in one day and went back for a few hours during mid day for a second day for our favorite rides and shows. Mickey and the Wonderous Book is my all time favorite Disney show. I just wish the castle wasn't under construction, but I'll just have to go to see the new one when completed. ",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -4276,7 +4276,7 @@
   },
   {
     "text": "Dumb to go.America Street is a boring place because the prices ain't cheap and much can be bought elsewhere.The other zones are horrible,with too much people and staff not doing much for the adventure.Very unhappy during the whole trip.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -4330,7 +4330,7 @@
   },
   {
     "text": "Went with family , 2 children age 4 and 13.The Disneyland MTR was nice, took around 10 mins to reach the destination.We went on 7 11 2018, Weather was sunny ,no rain at all.We stayed Novotel City Gate hotel so it was 2 stations to Disneyland which was very convenience.",
-    "sentiment_LLM": "NEUTRAL",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -4348,7 +4348,7 @@
   },
   {
     "text": "Had Visit on the 5th of Nov. Sadly alot of rides and attraction is close.  Besides that the place is clean and well kept.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -4411,7 +4411,7 @@
   },
   {
     "text": "Overall the place was ok but many attractions were closed with no reduction to the entry price. The attractions were OK but nothing like I expected at a Disney Park. Only the Americans can do Disney!!!! All in all though it was an OK day out.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -4439,7 +4439,7 @@
   {
     "text": "We visited HK Disneyland on our last day in Hong Kong, the food was great, but as to be expected over priced and the lines were a nightmare! A lot of the rides with audio only had it in Cantonese   understandable because your in HK, however, it   s a bit of a let down if you don   t understand it.",
     "sentiment_LLM": "NEUTRAL",
-    "sentiment_API": "NEGATIVE",
+    "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
     "sentiment_HuggingFace": "NEGATIVE",
@@ -4456,7 +4456,7 @@
   },
   {
     "text": "We went there , but frankly speaking travelling to other Disneylands , this one could do better. We didnt see the night parade since it was on HOLD for quite some time know . Overall , It is too pricey for the enjopyment expected.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -4501,7 +4501,7 @@
   },
   {
     "text": "A fairytale place to visit when you are in HK. The easy and cheaper way to Disney Land is taking MRT.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -4591,7 +4591,7 @@
   },
   {
     "text": "Felt like a kid again. Obviously smaller than the originals but still entertaining and an experience for those that havent been to the originals",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -4609,7 +4609,7 @@
   },
   {
     "text": "This is amazing loved every second of it ,  The queues to meet the characters can be a bit long especially in the heat but well worth it if you can keep your child shaded and entertained,",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -4636,7 +4636,7 @@
   },
   {
     "text": "Nothing out of this world but good scenery and organization. What i liked the most was the robot trash bin going around by itself and talking :D",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -4645,7 +4645,7 @@
   },
   {
     "text": "Nothing short of amazing! Although during our visit there was a private event so they had to close 4 attractions which I felt was a bit unfair. They could   ve given a discount for visitors for that day or made an announcement prior.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -4654,7 +4654,7 @@
   },
   {
     "text": "Happiest place on earth, may have to agree  We had a ball   Go with your mind set at kiddy level and you will have a ball",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -4672,7 +4672,7 @@
   },
   {
     "text": "Like all Disneyland's throughout the world it's primarily designed for the kids. I recommend taking the MTR out to this theme park. Like I said Disneyland is more for the kids than adults but lets face it we can be kids again for a day. I recommend staying and watching the nightly fireworks show which begins at 8pm nightly.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -4699,7 +4699,7 @@
   },
   {
     "text": "Disneyland is one of the major attractions for Tourists visiting HongKong.However, it is very very expensive! Apart from that it is a heaven for kids!",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -4717,7 +4717,7 @@
   },
   {
     "text": "You can't go wrong with disneyland when your with kids. I suggest to go here early to avoid long lines. During the afternoon lines for the rides starts to build up. The waiting time is between 20 40mins unlike in the morning its just between 5 10mins.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -4726,7 +4726,7 @@
   },
   {
     "text": "Had a really memorable time here. Best food I've had at a theme park, hands down. Night parade was beautiful. Can't wait to come back!",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -4735,7 +4735,7 @@
   },
   {
     "text": "The main trip highlight is disneyland. Loads of fun and loads of excitement. We had a super time here.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -4771,7 +4771,7 @@
   },
   {
     "text": "Was quite disappointed as the castle was under renovation hence no fireworks. The characters roaming around the park was limited. The street march ended very fast.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -4816,7 +4816,7 @@
   },
   {
     "text": "We loved Hong Kong Disneyland!  There is just something so special and magical about Disneyland and Hong Kong Disneyland captures this well. You only need to see the smiles on the faces during the parade to know this is one great place.",
-    "sentiment_LLM": "NEUTRAL",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -4861,7 +4861,7 @@
   },
   {
     "text": "We enjoyed our day out in Disneyland, not like before that over crowed ( weekend  dilemma ). We can pleased our over the rides without long queues.",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -4870,7 +4870,7 @@
   },
   {
     "text": "I had awesome fun at Disneyland they had a fun Halloween show with Mickey Minnie goofy dancing. Had A great fun day there.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -4906,7 +4906,7 @@
   },
   {
     "text": "Much smaller than the California Disneyland but almost identical in some respects.  Can be covered easily in half a day.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -4915,7 +4915,7 @@
   },
   {
     "text": "It's close to the airport and small enough to do on a stop over.  Great for young families   it's not that busy and you can go to the toy story land.",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -4978,7 +4978,7 @@
   },
   {
     "text": "Our first Disneyland and there were rides for 10 and 12 year old. Entry took 50 minutes when arriving at 10, but straight through the second day at 4!",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -5005,7 +5005,7 @@
   },
   {
     "text": "Our kid enjoy the place much,the hotel we stayed offer us discounted ticket,the place are easy to reach by metro.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -5050,7 +5050,7 @@
   },
   {
     "text": "Very well organised place, good fun to spend a day with kids. If you plan well, can enjoy all the shows in a day's trip. However, timings for meeting various characters should be increased, especially if the crowds are large.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -5077,7 +5077,7 @@
   },
   {
     "text": "Disneyland Hong Kong is small compared to other Disneyland we visited. When we visited it wasn't that clean. Leaves from the trees are scattered in the alley. The pavement construction was not sophisticated too. The pros is that you can roam the entire Disneyland in one day for it wasn't that big.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -5122,10 +5122,10 @@
   },
   {
     "text": "By comparison to LA , this Disneyland is not so intimidating and bug. We spent 2 days and still did not see everything. The ride lines are not long, didn   t use our priority passes. The staff are friendly and with a 6 year old it was perfect. ",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "NEGATIVE",
-    "sentiment_Manual": "NEUTRAL",
+    "sentiment_Manual": "POSITIVE",
     "sentiment_HuggingFace": "POSITIVE",
     "sentiment_VADER": "POSITIVE"
   },
@@ -5203,7 +5203,7 @@
   },
   {
     "text": "My first trip to Disneyland ever. Definitely wont be my last. Staff are friendly to help with our inquiries and despite the long wait for the rides, they are definitely enjoyable.Will definitely revisit in the future. Thabks for bringing the kid in me once again.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -5221,7 +5221,7 @@
   },
   {
     "text": "Everyone dream of visiting Disneyland, once in their life. One of the reason of visiting Hong Kong was this only. Starting from Disneyland train till the last ride, enjoyed a lot. If there would have been some more rides and timings would have extended till 9 PM, it would have been AWESOME.",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -5230,7 +5230,7 @@
   },
   {
     "text": "The area is small though with the standard attractions of Disneylanin. The food iside the park is expensive as other Disneylands. However, still a good place for kids under 10. As it is not that big, it is good enough for one day tour and not too tiring. A lot of places to take photos. Better not to choose October or Chinese New Year as it will be crowded to serve the huge Chinese visitors.",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -5239,7 +5239,7 @@
   },
   {
     "text": "All you would expect from a Disney site. The queues were short on the day which meant that we saw  rode most attractions in one day. The reason for not giving 5 stars is that an area of the park was to close at 7pm but two of the attractions closed just after 5pm so we could not visit",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -5338,7 +5338,7 @@
   },
   {
     "text": "Been there for Halloween. Theme park is a bit small with lots of tourists. So it's a bit crowded. Try to go on weekdays for better experience. Other than that, the rest of the experience was good.",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "POSITIVE",
@@ -5473,7 +5473,7 @@
   },
   {
     "text": "i go to disneyland soon after i arrived at HK airports. you can leave your luggage in the luggage storage near the gate of hongkong disneyland. the ride is mostly for kids. only 1 5 attraction dedicated for adult. its better if you stay in the resirt because its only a few walk away. i visit and september, unfortunately the fireworks is not available due to renovation.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -5491,8 +5491,8 @@
   },
   {
     "text": "like the title said, its a wonderful place. went there on Aug18 with the childrens and they were stoke!! even the weather was hot hot hot so remember to bring lotsssss of water and mini fan for the children it will help a lot if you bring one. for precaution, it would not be a bad idea to bring a rain coat cause it could rain anytime in HK.the theme park was clean, well organise and very plesing to walk around dispite the number of people there. ",
-    "sentiment_LLM": "POSITIVE",
-    "sentiment_API": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
+    "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
     "sentiment_HuggingFace": "POSITIVE",
@@ -5518,7 +5518,7 @@
   },
   {
     "text": "If not for Disneyland theme , I really not found it worth spending your full day on this. Quite expensive too and far from the city. I feel Ocean Park is a much better alternative to spend a day.",
-    "sentiment_LLM": "NEUTRAL",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -5554,7 +5554,7 @@
   },
   {
     "text": "The all park is nice BUT how is possible that you come there with kids and want to take some photos with famous Disney cartoons like Mickey and Minnie and they don   t let you. Ok I understand that people need rest but than you need to have few of this cartoons to take photos not just one. They are photographying for 1 hour after that they are on pausa another hour and people are waiting them to come back, they let group of people after that they say it   s over no more photos.... I don   t understand that policy",
-    "sentiment_LLM": "NEUTRAL",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "POSITIVE",
@@ -5626,7 +5626,7 @@
   },
   {
     "text": "Its famous attraction of hong kong probably because of its brand. However, I didn't find any extra ordinary ride s or show s in this theme park. I would rather suggest spend one extra day in Ocean park.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -5680,7 +5680,7 @@
   },
   {
     "text": "There are halal eateries available on the premise.Easy access by MRT.Kids friendly. There are strollers available for rent.There are nursing and baby care rooms.It's a day pass. you can exit and re enter within the same day.We went to Citygate Outlet in between as it was one MRT station away.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -5878,7 +5878,7 @@
   },
   {
     "text": "What can I say, having been to the USA and to Disney Paris, this one is the worst one so far. Expensive to enter, expensive to buy water and food.Gifts were over priced too.Totally disappointed that there were no big rides, everything seemed geared towards young children, nothing for us big kids.Don't waste your money, save up and go to the USA, the best Disney by far.",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "NEGATIVE",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEGATIVE",
@@ -5932,7 +5932,7 @@
   },
   {
     "text": "The title sums it up really ... we managed to do the whole park in a day (including going on all rides and watching both the daytime and evening parades (festival of lights ?).  Typical Disney atmosphere and loved it but it is very small.",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "POSITIVE",
@@ -5968,7 +5968,7 @@
   },
   {
     "text": "I have been here twice and on both visits, it felt like I came back to my childhood years. I would love to go to the other branches of disneyland again!",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -5977,7 +5977,7 @@
   },
   {
     "text": "Compared to DL in the USA, park is small. However, still had a great time.  Went on a mon wed, no lines in the park.  Very clean.  Staff very friendly.  Both parades were fun.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -6031,7 +6031,7 @@
   },
   {
     "text": "Went on a Thursday and literally didn't have to wait for any rides. The only negatives are no Haunted House, Pirates of the Caribbean, Matterhorn :( Yet, air conditions was working in full force inside all of the attractions.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -6040,7 +6040,7 @@
   },
   {
     "text": "Love the parade and all the adventures   The trolley mine coaster was super fun  Had a good buffet at Mickey Mouse restaurant and it was awesome     ",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -6076,8 +6076,8 @@
   },
   {
     "text": "This is my second time here. Loved this place and the atmosphere. Too bad the Fantasyland was closed for renovation. Staff was extremely helpful. Toilets can be found everywhere. And it's clean. Merch were very expensive though.",
-    "sentiment_LLM": "NEGATIVE",
-    "sentiment_API": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
+    "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
     "sentiment_HuggingFace": "POSITIVE",
@@ -6085,7 +6085,7 @@
   },
   {
     "text": "Hugely expensive (  126.40 for one adult and one 14yo.) for what surely must be the smallest of Disney's park offerings. If you expect western style junk food, think again, this was worse. The rides were good. Queue discipline was at times bad with ignorant people shoving their kids past us and when their kids cried out that the adults couldn't get by to join them, we reluctantly let them through too. The fairytale castle, tiny as it is was behind hoardings as I guess they were working to add extra magic with the diggers that were there. Go to Ocean Park instead.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -6103,7 +6103,7 @@
   },
   {
     "text": "The park was not big, you can complete it in a day. Do bring an umbrella in case of rain during the rainy season. What really turns me off is the service at some of the cashier. They seems to want you to get out as soon as possible. ",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -6148,7 +6148,7 @@
   },
   {
     "text": "Not as large at other Disneyland properties but still the happiest place on earth.  Be aware that many rides when standing in queue don't have shade so can be very hot.   Not so many rides for entertainment.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -6157,7 +6157,7 @@
   },
   {
     "text": "I have visited both the Walt Disney World and the Disneyland in Ca, this is a small one.  However, in the plus side, it's not as crowed and the admission is not as expensive as Walt Disney World and Disneyland in Ca.",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -6175,7 +6175,7 @@
   },
   {
     "text": "A great attraction located not far from the city and accessible by mtr. The rides were good and not long ques. Even though it rained we had a great day.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -6229,7 +6229,7 @@
   },
   {
     "text": "My family and I enjoyed the shows and shopping for souveniers. Just don't go there during rainy season 'cause it will spoil the fun. :)",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -6265,7 +6265,7 @@
   },
   {
     "text": "Another tourist spot to visit for our educational tour, the    highlight one    for me. It was really fun!!",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -6319,7 +6319,7 @@
   },
   {
     "text": "Because I don't have much time in Hong Kong, I visited Disneyland and Ngong Ping in 1 day. After noon, I went to visit Disneyland until it closed. But overall, I was quite satisfied even though only half a day playing rides there (and still get a little time to see the souvenir shops). Disney is definitely one of the must visiting places in HK.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -6427,7 +6427,7 @@
   },
   {
     "text": "Not bad for my first Disneyland experience. I stayed until night to watch the parades and light shows. Had so much fun!  P.S. Don't forget to collect stickers from the crew members! :)",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -6445,7 +6445,7 @@
   },
   {
     "text": "Great place to visit for one or two entire days. Take water from home, drinks are really expensive inside the Park.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -6472,7 +6472,7 @@
   },
   {
     "text": "What a great place to be with family and friends!  Lovey shows and in the end there was a firework show to end the day.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -6517,7 +6517,7 @@
   },
   {
     "text": "Visited this place a few times and the most recent one, we managed to catch the iron man which is one of the newer attractions to the park. The place holds special meaning to us and each time we returned back, the feelings are always very special. Very nice place to visit. ",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -6526,7 +6526,7 @@
   },
   {
     "text": "My 9 year old girl was all so excited. Never saw her this happy. The roller coasters, especially grizzly gulch was exhilarating and kids enjoyed it as much as adults.Fantasyland is a must do for young kids. The parade especially the one in the night  paint the night  is amazingly beautiful and one of a kind experience for kids.",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -6580,7 +6580,7 @@
   },
   {
     "text": "Hong Kong Disney is super fun, it   s one of the smaller Disneyland   s which means you could easily do it in one day. Be sure to go on the Ironman ride it   s excellent and the haunted Mansion. A great fun day I recommend Hong Kong Disneyland.",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -6598,8 +6598,8 @@
   },
   {
     "text": "Small and dated. Poor facilities. Young children will enjoy the place. The food is very expensive...",
-    "sentiment_LLM": "POSITIVE",
-    "sentiment_API": "NEGATIVE",
+    "sentiment_LLM": "NEUTRAL",
+    "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEUTRAL",
     "sentiment_HuggingFace": "NEGATIVE",
@@ -6643,7 +6643,7 @@
   },
   {
     "text": "Having read some of the reviews that it was small and over rated, we went and found it was better than expected.  We went on Monday, during the height of the August summer holidays. It rained slightly in the morning but it didn   t deter the...More",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -6652,7 +6652,7 @@
   },
   {
     "text": "This place is very good for familiy. Worthed. Many attractions and shows, for kids until adults. Slow until fast. Excellent shows is mickey and the parade at night. Must see Disneyland.",
-    "sentiment_LLM": "NEUTRAL",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -6706,7 +6706,7 @@
   },
   {
     "text": "By far the smallest Disney. Easy enough to get most done in 1 day. Went during week so not so many kids. Has all the classic Disney features but on a smaller scale.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -6733,7 +6733,7 @@
   },
   {
     "text": "Disneyland Hong Kong was beautiful! My husband and I spent a day there and thoroughly enjoyed it. The center of the park was having renovations done which was disappointing but all the other attractions were up and running. The park was well organised, clean, easy to navigate and if you get there early you beat the lines and the heat.",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -6778,7 +6778,7 @@
   },
   {
     "text": "Quite expensive for not so much to see and do. Rides overcrouded with waiting times of an hour or more. If your first time it might be okey but not for a second visit.",
-    "sentiment_LLM": "NEUTRAL",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -6787,7 +6787,7 @@
   },
   {
     "text": "we when in August and it was Monday and still a lot of people.we did it for the kids but the weather is really hot and humidity is like 80% plus. they do the big pride at the end just before they close and imagine every one going home at the same time.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -6913,7 +6913,7 @@
   },
   {
     "text": "This place is awesome... One day is not enough to go around...yeah this is the happiest place on earth even your old you feel the happiness inside your heart... And the best part my kids really enjoyed this place...",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -6940,7 +6940,7 @@
   },
   {
     "text": "We, my companion and I, he was 72 at the time did a couple of rides, we stood in line for hours but laughed like kids. It was very humid though.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -6985,7 +6985,7 @@
   },
   {
     "text": "One of my favorite spot when in Hongkong  Iove the ambiance , full of kids and for sstar wars fans :)",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -7004,7 +7004,7 @@
   {
     "text": "We took the bus from Shenzhen to get there (give yourself time   the trip can take a while). We were there in December, so the crowds weren't too bad. Best rides to go on: Hyperspace Mountain (like Space Mountain in the US, but Star Wars themed), Mystic Manor (the Hong Kong answer to the Haunted Mansion), and Big Grizzly Mountain   truly the best surprise of the three! One pet peeve: as a US citizen there, I was sad that all the popcorn was sweet rather than salty. I would've loved some butter and salt popcorn while I was there.",
     "sentiment_LLM": "NEUTRAL",
-    "sentiment_API": "POSITIVE",
+    "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
     "sentiment_HuggingFace": "POSITIVE",
@@ -7021,7 +7021,7 @@
   },
   {
     "text": "My beautiful wife and family visited this disney park to have our late teen kids enjoy the experience. Previously l have been lucky enough to visit most other Disney theme parks.Gotta say l was totally underwhelmed and disappointed at what was on offer.lf it wasn't for space mountain I'm sure my kids were too.Without key attractions found in other parks it was just very flat and ordinary.Probably give this a miss as this is not a true indicator of the full Disney experience.Disappointing..",
-    "sentiment_LLM": "NEUTRAL",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -7039,7 +7039,7 @@
   },
   {
     "text": "It's nice as a theme park, there're quite a lot of rides (tho not all of them are so thrilling), the shows are also fabulous. However, there were WAY TOO MANY PEOPLE! Some sort of crowd control should be exercised!",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "POSITIVE",
@@ -7057,7 +7057,7 @@
   },
   {
     "text": "A small version of Orlando with subtle Asian influences that are necessary,  balanced, subtle, and work well with a mostly American theme park experience.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -7102,10 +7102,10 @@
   },
   {
     "text": "I   m not one for Disney theme parks, and the price seems a bit high in my opinion, but if you   re in the area with kids, it   s perfectly respectable amusement park with a decent bit of rides, especially for the younger set. If you   re in East Asia and can   t make it to the bigger parks, this is a perfectly acceptable alternative.",
-    "sentiment_LLM": "NEUTRAL",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
-    "sentiment_Manual": "NEUTRAL",
+    "sentiment_Manual": "POSITIVE",
     "sentiment_HuggingFace": "POSITIVE",
     "sentiment_VADER": "POSITIVE"
   },
@@ -7201,7 +7201,7 @@
   },
   {
     "text": "Went to visit this HK Disneyland.  Very small park compared with Eurodisney, parked was packed (we went on a tuesday) and as any disneyland, had to queue up for 45mins average for playing.  There were no  pirates of the caribean  nor  peter pan  attraction.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -7210,7 +7210,7 @@
   },
   {
     "text": "This was my first disney land and I liked it a lot as I got immersed in it pretty well. they dont break character anywhere and that is what I liked the most.",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -7219,7 +7219,7 @@
   },
   {
     "text": "Smaller version of Disney but equally good. Teenagers had a great day.  who doesn   t love a day a Disney!",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -7246,7 +7246,7 @@
   },
   {
     "text": "Smallest Disneyland, I finish walking the whole place in 30min. Strongly recommend not to even spend time here.  Service also very bad!",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEGATIVE",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEGATIVE",
@@ -7444,7 +7444,7 @@
   },
   {
     "text": "Nice place to hang out with kids..though kids below 12yrs will have max fun..overall a fun place..we did this in two days",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -7453,7 +7453,7 @@
   },
   {
     "text": "May be one of the smaller Disneyland   s, but it   s really clean and well put together. A few of the better rides were closed when we visited so make sure you double check online before you go.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -7570,7 +7570,7 @@
   },
   {
     "text": "Student silver annual pass costs only $800ish and is just 45 mins away from city centre. Also recommend to visit Inspiration Lake which is 5 min away by bus or 15mins by walk.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -7579,7 +7579,7 @@
   },
   {
     "text": "We made a mistake by coming after lunch (planning to see the 8.45pm parade and do not want to overtire my son), should have come earlier as we do not have time to see most of the exhibit.Bought 4meal coupon for the 5 of us, which provided to be to much food, the portion were quite generous.You can rent stroller at Fire Station at Main St for 120KHD; recommended if you're bringing small children.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -7624,7 +7624,7 @@
   },
   {
     "text": "Little disappointing as we have been to Disneyland in Anaheim and Florida. This one is much smaller and not as many rides, no water rides at all and with being so hot we were all disappointed with that.Other than that just st a miniature version of the real thing",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEGATIVE",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEGATIVE",
@@ -7777,7 +7777,7 @@
   },
   {
     "text": "It was raining on & off on the day we visited so most of the rides were closed. They did open for a short while but immediately the waiting was at 30 mins each before the rain played spoil sport again. Not many options for older boys. My son   9 yrs was quite bored there. A couple of rides were also out due to technical issues.",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -7795,7 +7795,7 @@
   },
   {
     "text": "if you like queuing behind thousands of Mainland tourists for hours then visit this 'attraction'It is small,, on the way to the airportThe Govt allocated an equal portion of land for expansion adjoining this site which has not been taken up on.Better to go to Ocean Park",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -7804,7 +7804,7 @@
   },
   {
     "text": "If you have a company with child at heart.You will enjoy going here.But i don't recommend to visit on april or may.it is too hot.i suggest go on during feb or march.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "POSITIVE",
@@ -7813,7 +7813,7 @@
   },
   {
     "text": "I went with no expectations and left with one of the best experiences so far to date. Its small enough to get around the whole thing in a day and the attractions are pretty incredible.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -7822,7 +7822,7 @@
   },
   {
     "text": "the place looks old and outdated  food is expensive  hard to get a coffee anywhere  , layout is all over the place  save your money and go to disneyland tokyo instead",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -7849,7 +7849,7 @@
   },
   {
     "text": "The Park was great, the family loved the experience however we really loved the shops and amazing variety in Disney items we could purchase. We probably spent more time in there than the actual park. The kids loved the air conditioned or fans in the waiting lines as it was a very warm day that we visited. The park copes well with a lot of park visitors and waiting time in lines for all rides were kept to a minimum.",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -7858,7 +7858,7 @@
   },
   {
     "text": "Not value for money.. Overated and very small Disneyland and its a tourist trap to go here. Better to visit Ocean Park instead...",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -7912,7 +7912,7 @@
   },
   {
     "text": "All I can say is a whole day is not enough to experience everything inside the theme park. The best ride for me is the Mystic Manor second is the RC Racer and third is the Grizzly Gultch. Marvel Ironman Experience is also ok same...More",
-    "sentiment_LLM": "NEUTRAL",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -7957,7 +7957,7 @@
   },
   {
     "text": "Right from the start at the entrance, we experienced a sense of awe with Walt Disney world of imagination. This is indeed a comprehensive design sets of the actual Hollywood sets in HK. Giving you the various themes made popular by WD. Not for the...More",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -8002,7 +8002,7 @@
   },
   {
     "text": "This Disneyland is maintained in good condition. It is alright for 1 2 days of fun with rides for each age and adults too. It lacks in key items such as good restaurants. We wanted to go to exclusive restaurants but there was no help to...More",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "POSITIVE",
@@ -8057,7 +8057,7 @@
   {
     "text": "The trip to HK Disneyland was a blend of good and bad experiences. Firstly it's a bit expensive travel to and fro in MTR form Hong Kong or Central station to Disneyland. The entry ticket pass is also expensive. The only recommendation I would give is if you have been to any other disneyland's in the world or especially paris, skip this one for sure. There's no need to waste your time, money and a whole day for this place. I have been to another 3 disney's including paris and I am telling you from my experience. It is seriously not worth it. If you have kids who are under 15 then you can surely opt a day out in disney but if you are traveling adults or teens like me in early 20's then it's a strict no. They don't have any thrilling rides for adults or teens. Though the whole idea behind creating a disney park is for children but they should keep in mind that children are not the only age group that visit. Besides it is so packed and flocked. The queues and waiting times are very long and lengthy. There's not much seating space with shade. The food and drinks in the disney are way too expensive. Not much choices for vegetarians. The Ocean Park is a very good alternative for Disneyland. You can choose Ocean Park over Disneyland on any given day and you surely won't regret it. Kids will surely love disneyland but not all age groups I am afraid. The evening lights in the park are very pretty. Hence we made a mistake and sacrificed a day which we could had utilized for a better purpose.",
     "sentiment_LLM": "NEUTRAL",
-    "sentiment_API": "POSITIVE",
+    "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEUTRAL",
     "sentiment_HuggingFace": "NEGATIVE",
@@ -8065,7 +8065,7 @@
   },
   {
     "text": "With this Disney I now had all 6 under my belt. This one is said to be the least favorite but I thoroughly enjoyed my whole day. Yes, it is small and the castle was an eyesore being renovated. No one seems to understand the fast passes so I was able to use them all day. Went on a week day and it was the best crowd size I have enjoyed in years!",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -8083,7 +8083,7 @@
   },
   {
     "text": "but I really had fun in Disneyland!   Came here with my sister and a fellow solo  traveller I met at my hostel, and we all agreed that it was the highlight of our Hong Kong trip",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -8093,7 +8093,7 @@
   {
     "text": "I hate to give Disney a bad review but I have not been to Hong Kong Disneyland in about four years and I was a bit disappointed today. It was just not quite    on pointe    and lacked some of that    Disney Magic   . Small things were out of place... for example some of the lights not working and the rain chains not lying correctly in the rain forest scene in    it   s a small world   , a maintenance man fixing a gate that was not even being used (with all his tools on the ground in front of him) in the line of    Ironman Experience    while visitors were walking by to ride and the majority of the non performing cast members looking like they hated their jobs   no smiles.We were looking forward to seeing the new Moana show but the venue is absolutely ridiculous. Only three rows of seats in an area that could accommodate a lot more and not much shade cover so unless you got the seats, you had to stand in the hot sun for 20 minutes to watch. That made the entire show very unenjoyable and was a real downer. The kids hated it and said it was the worst part of their day. It   s seriously just seemed like Disney took the cheap route to create a new entertainment item.Also, we did not see it posted anywhere, not even on the Disneyland app, that they now close the rides in the back of the park one hour before closing time    We wasted time walking to the back of the park to ride some of those rides again and we would have changed our evening schedule had we known they would close early. We used to love riding the Mine Cars in the dark before the park closed.My sister was visiting us and is an avid Disney fan. She said,    No wonder no one comes to this Disneyland. The park is not open enough hours to get your money   s worth, they close some of the rides early and there is not a lot of shade cover compared to the other hot location, Walt Disney World in Florida.   I expect more from Disney. Thankfully, the new Light Parade is fantastic and so the day ended with that classic    Disney Magic   . ",
     "sentiment_LLM": "NEGATIVE",
-    "sentiment_API": "POSITIVE",
+    "sentiment_API": "NEGATIVE",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEGATIVE",
     "sentiment_HuggingFace": "NEGATIVE",
@@ -8164,7 +8164,7 @@
   },
   {
     "text": "No words to express, you must visit to feel the same.. KIDS come alive in you once u reach these theme park and u will become kids with your kids..",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -8173,7 +8173,7 @@
   },
   {
     "text": "As part of my bucket list ,visiting All the Disney parks was on the list.As a Senior entrance was only $100HK. I have 2 Favourite rides Pirates and Small world. HK doesn't have Pirates and Shanghai doesn't have Small World.By going to both I was satisfied .. Having no Pirates is the only reason 4** instead of 5**. at HK . God value and totally a better experience than Shanghai.",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -8191,7 +8191,7 @@
   },
   {
     "text": "Travelled here with the family and t'was really awesome seeing a lot of things such as mickey mouse and other characters as well. Very recommended for kids and to those who wanted to experience what really Disneyland is, its a BIG WOW,",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -8263,7 +8263,7 @@
   },
   {
     "text": "Had a nice and crazy experience in Disneyland HK. Good for begginers on lunaparks and rollercoasters!",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -8281,7 +8281,7 @@
   },
   {
     "text": "we thought one day is not enough, but, surprisingly, it was! Disney Hongkong is apparently the smallest Disneyland in the world, so one day visit is just enough. the happiness from my 5 year old faces seeing buzz, woody, donald and the rest of the disney characters was truly priceless!!!we didnt have any problems going to the place due to a very accommodating tour guide!",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -8299,7 +8299,7 @@
   },
   {
     "text": "It was extremely hot weather in June so avoid summer time.The place is small so it is manageable for family with young children.Go straight to Fantasyland if your kids are below 6 so you can go for most rides.The night parade was worth to watch but a bit disappointed that we didn't get to see any Disney characters walking about for photo taking.Castle is also closed so no fireworks at night.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -8344,7 +8344,7 @@
   },
   {
     "text": "It was a bit disappointing as the Cinderella castle was under renovation and we didnt get to see the fireworks. The park was smaller than we had imagine it to be. Rides weren't that many either. Good thing was that we went there during the non peak season so we do not really need to queue long for most of the rides. ",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -8398,7 +8398,7 @@
   },
   {
     "text": "We are Disney fans but hate standing in long lines. If you are like us, try HK Disneyland. Weekdays are slow and the shows and food are great.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -8416,7 +8416,7 @@
   },
   {
     "text": "Super Duper Disney !  Enjoyed the family day @ the Disney resort with fun filled games, rides, eats, memorabalia, etc  Fantastic locale, fun for all ages from 3 to 80 !  Always happy to be there",
-    "sentiment_LLM": "NEUTRAL",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -8434,7 +8434,7 @@
   },
   {
     "text": "This Disneyland is supposed to smaller than others. However, the shows were excellent and there are long lines in this place. It is recommended that you buy the fast tickets. It is a fun park to do. However, the rides are not as great as the Adlabs Imagica ones at Lonavala. So they were a bit of a disappointment.",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "POSITIVE",
@@ -8461,7 +8461,7 @@
   },
   {
     "text": "This is a great place to take your kids. If you have not been before it's worth checking it out one time. I wouldn't return as there are better alternatives like Ocean Park.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -8479,7 +8479,7 @@
   },
   {
     "text": "Of crs it   s the    happiest place in the world     It   s the right size for someone like me to cover everything in one day  Beautiful!",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -8524,7 +8524,7 @@
   },
   {
     "text": "Great experience for kids especially Disney fans. The park facilities are good, though it was bit warm during the day during our visit.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -8533,7 +8533,7 @@
   },
   {
     "text": "I have been to Disneyland in Florida which was and experience not to miss and I would definitely say the same about this one.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -8551,7 +8551,7 @@
   },
   {
     "text": "I've been here several times since they first opened.  My first visit was disappointing as the park was much smaller than all of the other D'lands.  But everything I go, the park seems to have expanded more than the time before!",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEGATIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEGATIVE",
@@ -8605,7 +8605,7 @@
   },
   {
     "text": "A fun space for all age groups... The creativity and the beautiful attractions for kids is totally commendable. The rides are all good . 5 stars for the time managemnt at the shows and rides.... Praiseworthy. We had a lovely time with our kids and they both enjoyed it to the core.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -8623,7 +8623,7 @@
   },
   {
     "text": "24 hours is not enough..... must go back and spend at least 2 days there! So much to see and do but so little time!     ",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -8668,7 +8668,7 @@
   },
   {
     "text": "I wish you had something more than 5 star rating ....impossible to express the joy and fun my kids had!",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "NEGATIVE",
     "sentiment_Manual": "POSITIVE",
@@ -8686,7 +8686,7 @@
   },
   {
     "text": "Whichever Disneyland you visit, it   s still a magical place that brings you back to the fond memories of your childhood watching all those Disney cartoons. Smaller in size compared to other Disneylands, it makes it very bearable to walk through the park. Since it is smaller, it has fewer attractions but the essential ones are there. One piece of advice, do price comparisons of the souvenirs and try as much not to buy it in the stores at Main Streey.",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -8740,7 +8740,7 @@
   },
   {
     "text": "Brings back all your childhood memories. A bit crowded and expect long lines everywhere. Also, requires a lot of walking and patience.",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEGATIVE",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
@@ -8758,8 +8758,8 @@
   },
   {
     "text": "Ignore the bad reviews I went today and had an amazing time!!! Yes it   s a small park compared to Disney world in Florida but I expected that!!! I got to do most of rides walk on and the cast members are friendly! Just know that if you come during the summer it rains a lot so bring an umbrella!!! ",
-    "sentiment_LLM": "NEGATIVE",
-    "sentiment_API": "POSITIVE",
+    "sentiment_LLM": "POSITIVE",
+    "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
     "sentiment_HuggingFace": "POSITIVE",
@@ -8812,7 +8812,7 @@
   },
   {
     "text": "Go here with you   re children And have more then a Nice Day. Children And adults all love this park!!",
-    "sentiment_LLM": "NEUTRAL",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "POSITIVE",
@@ -8875,7 +8875,7 @@
   },
   {
     "text": "We are from the Gold Coast so spoilt with amazing theme parks but had to tick off Disneyland while in Hong Kong. The place is very well done but hardly any rides and a very small park. The rides they did have we're more geared up for toddlers which is Disneys target market.If you have teenagers I wouldn't suggest it. My kids were very disappointed.",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "POSITIVE",
     "sentiment_API": "POSITIVE",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "POSITIVE",
@@ -8956,8 +8956,8 @@
   },
   {
     "text": "We took my 5yo daughter here and she loved every minute. The rides, the shows, the characters. Even the queues weren't too bad. We'll be coming back.",
-    "sentiment_LLM": "POSITIVE",
-    "sentiment_API": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
+    "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",
     "sentiment_HuggingFace": "POSITIVE",
@@ -8965,7 +8965,7 @@
   },
   {
     "text": "There were no fireworks because the castle was undergoing transformation : ( Since it was already a small version, the transformation of some areas made it much smaller : (",
-    "sentiment_LLM": "NEGATIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "NEUTRAL",
     "sentiment_Manual": "NEUTRAL",
@@ -8992,7 +8992,7 @@
   },
   {
     "text": "It will indeed give you an experience of a lifetime.Rides and attractions are made for any one. It will let you recall your childhood memories.    PlacesForAllAges",
-    "sentiment_LLM": "POSITIVE",
+    "sentiment_LLM": "NEUTRAL",
     "sentiment_API": "NEUTRAL",
     "sentiment_3Class": "POSITIVE",
     "sentiment_Manual": "NEUTRAL",

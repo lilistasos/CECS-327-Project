@@ -614,7 +614,7 @@
     },
     {
       "text": "Disneyland is a perfect place to unwind and to be child again! I will always find a way to visit all disneyland all over the world!",
-      "sentiment": "NEUTRAL"
+      "sentiment": "POSITIVE"
     },
     {
       "text": "Magical, fun time at Disneyland. We had 2 wonderful days here. All staff make the visit extra special as they are so kind and patient.  Unfortunately we were disappointed to find the fireworks were cancelled both nights we were there. No warning or explanation.",
@@ -1502,7 +1502,7 @@
     },
     {
       "text": "We visited Disneyland in early November. The weather was perfect and we were very impressed with the ease in locating the rides and getting from one point to the other. The queues moved quickly on a weekday, I imagine the larger crowds visit on the weekends and holidays. Would definitely recommend and revisit.",
-      "sentiment": "NEUTRAL"
+      "sentiment": "POSITIVE"
     },
     {
       "text": "Being Hong Kong I thought it was going to be soo much better than what it is. Only about 3 'big' rides in the whole park & I wouldn't consider them big in comparison to places like Thorpe Park or Alton Towers.Happy to say that I have been there, but wouldn't recommend a thrill seeker to go there.",
@@ -2278,7 +2278,7 @@
     },
     {
       "text": "By comparison to LA , this Disneyland is not so intimidating and bug. We spent 2 days and still did not see everything. The ride lines are not long, didn   t use our priority passes. The staff are friendly and with a 6 year old it was perfect. ",
-      "sentiment": "NEUTRAL"
+      "sentiment": "POSITIVE"
     },
     {
       "text": "I love Disney. I can say that I am Donald Duck and Mickey Mouse biggest fan. But I still can't get the idea of spending 2 3 days of your holidays in Disneyland. For that reason, I think the size of the area of HK Disneyland is perfect. It might be slightly smaller than other Disneylands, but for some people who does not want to spend their times in Disneyland (just like me), this place is great. I came to this place in June, when it was 32degrees celsius in HK. If I have to spend my whole day in Disneyland under the crazy sun of HK, I don't think I would make it. Lol. So it might be a good idea not to have a bigger area of Disneyland in 2 seasonal countries such as HK. Furthermore, you still can have all of the favourite rides and attractions. So, overall...i give it 4 stars. Highly recommended if you want to have Disneyland experience but unwilling to spend more than 1 day trip.",
@@ -3158,7 +3158,7 @@
     },
     {
       "text": "I   m not one for Disney theme parks, and the price seems a bit high in my opinion, but if you   re in the area with kids, it   s perfectly respectable amusement park with a decent bit of rides, especially for the younger set. If you   re in East Asia and can   t make it to the bigger parks, this is a perfectly acceptable alternative.",
-      "sentiment": "NEUTRAL"
+      "sentiment": "POSITIVE"
     },
     {
       "text": "Nice parade show, nice ride, but you will need to wait for at least 40 minutes until you can get single ride. Need to spare the whole day for this place. Anyway, its place for both adult and children to visit.",
@@ -4002,11 +4002,11 @@
     }
   ],
   "performance": {
-    "total_time": 2.456031084060669,
-    "time_per_review": 0.002456031084060669,
+    "total_time": 3.88265323638916,
+    "time_per_review": 0.00388265323638916,
     "reviews_processed": 1000,
-    "memory_before": 322.12890625,
-    "memory_after": 328.59375,
-    "memory_used": 6.46484375
+    "memory_before": 386.20703125,
+    "memory_after": 390.8203125,
+    "memory_used": 4.61328125
   }
 }
