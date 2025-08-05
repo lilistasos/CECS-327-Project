@@ -278,8 +278,11 @@ choice = get_user_choice()
 if choice == 1:
     # Single run
     print("\nRunning single analysis...")
+    start_time = time.time()
     if run_single_analysis():
-        print("\nSingle analysis completed successfully!")
+        total_time = time.time() - start_time
+        print(f"\nSingle analysis completed successfully!")
+        print(f"Total execution time: {total_time:.2f} seconds ({total_time/60:.2f} minutes)")
         print("Running visualization...")
         import visualize
         visualize.run_visualization("current_run")
@@ -289,18 +292,24 @@ if choice == 1:
 elif choice == 2:
     # Three runs
     print("\nRunning three analyses for averaging...")
+    start_time = time.time()
     successful_runs = 0
     
     for i in range(3):
         print(f"\n--- Run {i+1}/3 ---")
+        run_start = time.time()
         if run_single_analysis():
+            run_time = time.time() - run_start
             successful_runs += 1
-            print(f"Run {i+1} completed successfully")
+            print(f"Run {i+1} completed successfully in {run_time:.2f} seconds")
         else:
             print(f"Run {i+1} failed")
     
+    total_time = time.time() - start_time
     if successful_runs > 0:
         print(f"\nCompleted {successful_runs} successful runs")
+        print(f"Total execution time: {total_time:.2f} seconds ({total_time/60:.2f} minutes)")
+        print(f"Average time per run: {total_time/successful_runs:.2f} seconds")
         print("Running visualization...")
         import visualize
         visualize.run_visualization("average_run")

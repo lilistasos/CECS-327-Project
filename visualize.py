@@ -154,11 +154,11 @@ def run_visualization(folder="current_run"):
     agreement_labels = list(agreement_counter.keys())
     agreement_values = list(agreement_counter.values())
 
-    plt.figure(figsize=(8, 6))
+    plt.figure(figsize=(10, 8))
     plt.pie(agreement_values, labels=agreement_labels, autopct='%1.1f%%', startangle=90)
-    plt.title('Model Agreement Analysis (6 Models)')
+    plt.title('Model Agreement Analysis (6 Models)', pad=20)
     plt.axis('equal')
-    plt.tight_layout()
+    plt.tight_layout(pad=2.0)
     save_graph('model_agreement.png', folder)
     plt.show()
 
@@ -280,7 +280,7 @@ def run_visualization(folder="current_run"):
 
         plt.xlabel('Sentiment Analysis Models')
         plt.ylabel('Memory Usage (MB)')
-        plt.title('Memory Usage Comparison\n(Only models with real memory data shown)')
+        plt.title('Memory Usage Comparison')
         plt.xticks(rotation=45)
         plt.ylim(0, y_limit)  # Set proper y-axis limits
         plt.grid(True, alpha=0.3, axis='y')
