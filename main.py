@@ -258,8 +258,7 @@ def run_single_analysis():
     print("- Manual sentiment analysis (Rule-based)")
     print("- Hugging Face sentiment analysis (DistilBERT)")
     print("- VADER sentiment analysis (Valence Aware Dictionary)")
-    print("- Performance comparison between all six approaches")
-    print("- Results saved for visualization and reporting")
+    print("- Results saved!")
 
     return True
 
@@ -272,7 +271,7 @@ def clean_main_graphs_folder():
             os.remove(file_path)
             print(f"Removed {file} from main graphs folder")
 
-# Get user choice
+# Get user choice and print latency to console.
 choice = get_user_choice()
 
 if choice == 1:

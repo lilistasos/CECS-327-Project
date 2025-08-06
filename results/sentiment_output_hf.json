@@ -4002,11 +4002,11 @@
     }
   ],
   "performance": {
-    "total_time": 44.97766089439392,
-    "time_per_review": 0.04497766089439392,
+    "total_time": 51.28959774971008,
+    "time_per_review": 0.051289597749710085,
     "reviews_processed": 1000,
-    "memory_before": 332.35546875,
-    "memory_after": 332.55859375,
-    "memory_used": 0.203125
+    "memory_before": 303.69140625,
+    "memory_after": 274.29296875,
+    "memory_used": -29.3984375
   }
 }
