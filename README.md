@@ -7,6 +7,8 @@ This project implements a distributed sentiment analysis system using Ray framew
 ## Contents
 To run this program on your own machine, please refer to the demo, setup, and requirements below in this *README.md*
 
+For the demo video, please use the unlisted YouTube link in the *DEMO* section of this *README.md*.xx
+
 For the project report, presentation, and requirements, refer to the report folder in the repository.
 
 For the project code and comments, refer to any three python programs; *main.py*, *tasks.py*, and *visualize.py*.
@@ -27,7 +29,6 @@ Generated graphs can be found in the graphs folder.
 3. Ensure you have the dataset file: `data/DisneylandReviews.csv`
 4. Run: `python3 main.py`
 5. Select either the Single (10 minutes - faster - recommended) or Average (30 minutes - better accuracy) 
-6. Run: `python3 visualize.py`
 
 ## Requirements 
 ### Python: 
