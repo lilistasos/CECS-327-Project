@@ -162,7 +162,7 @@ def run_visualization(folder="current_run"):
     save_graph('model_agreement.png', folder)
     plt.show()
 
-    # 6. Average Text Length by Sentiment
+    # 4. Average Text Length by Sentiment
     # Calculate text lengths
     text_lengths = [len(d['text']) for d in data]
 
@@ -207,7 +207,7 @@ def run_visualization(folder="current_run"):
     save_graph('avg_text_length_by_sentiment.png', folder)
     plt.show()
 
-    # 7. Model Consistency Analysis
+    # 5. Model Consistency Analysis
     def calculate_consistency(model_sentiments):
         """Calculate consistency score for a model"""
         consistency_scores = []
@@ -254,7 +254,7 @@ def run_visualization(folder="current_run"):
     save_graph('model_consistency.png', folder)
     plt.show()
 
-    # 8. Memory Usage Comparison
+    # 6. Memory Usage Comparison
     # Load memory usage data
     memory_usage = load_json_data('memory_used')
     

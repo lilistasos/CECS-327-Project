@@ -208,14 +208,12 @@ def analyze_sentiment_3class(text):
             text_lower = text.lower()
             
             # Count different types of sentiment words using global lists
-            very_pos_count = sum(1 for word in VERY_POSITIVE_WORDS if word in text_lower)
             pos_count = sum(1 for word in POSITIVE_WORDS if word in text_lower)
             neg_count = sum(1 for word in NEGATIVE_WORDS if word in text_lower)
-            very_neg_count = sum(1 for word in VERY_NEGATIVE_WORDS if word in text_lower)
             
-            # Calculate sentiment score
-            positive_score = very_pos_count * 2 + pos_count
-            negative_score = very_neg_count * 2 + neg_count
+            # Calculate sentiment score (using existing word lists)
+            positive_score = pos_count
+            negative_score = neg_count
             
             # Determine sentiment based on scores
             if positive_score > negative_score and positive_score > 1:
