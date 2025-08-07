@@ -28,18 +28,17 @@ Generated graphs can be found in the graphs folder.
 2. Install dependencies (see below)
 3. Ensure you have the dataset file: `data/DisneylandReviews.csv`
 4. Run: `python3 main.py`
-5. Select either the Single (10 minutes - faster - recommended) or Average (30 minutes - better accuracy) 
+5. Select either the Single (5 minutes - faster - recommended) or Average (15 minutes - better accuracy) 
 
 ## Requirements 
-### Python: 
+Python: 
 3.8 or higher
 
-### OS: 
+OS: 
 any
 
-### IDE: 
-PyCharm (recommend)
-
+IDE: 
+PyCharm (recommend), 
 Visual Studios Code
 
 ### Python libraries:
