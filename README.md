@@ -21,7 +21,7 @@ Generated graphs can be found in the *graphs* folder.
 
 ## Demo
 
-
+https://youtu.be/RiGPGMr7cRU
 
 ## Setup
 1. Clone/download the project
